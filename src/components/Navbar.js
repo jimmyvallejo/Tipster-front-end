@@ -34,7 +34,7 @@ const getStripe = () => {
       mode: "subscription",
       successUrl: `https://tipster-app.netlify.app/`,
       cancelUrl: `https://tipster-app.netlify.app/`,
-      customerEmail: "customer@email.com",
+      customerEmail: "test@test.com",
     });
     if (error) {
       console.warn(error.message);
