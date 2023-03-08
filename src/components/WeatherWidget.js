@@ -14,13 +14,12 @@ let WEATHER_API_URL = 'https://api.openweathermap.org/data/2.5'
 
   useEffect(() => {
     const fetchData = async () => {
-        await fetch(
-          `${WEATHER_API_URL}/weather/?lat=${lat}&lon=${long}&units=metric&APPID=363ad593afcc0d7d49a25b60fd9e7a52`
-        )
-          .then((res) => res.json())
-          .then((result) => {
-            setData(result);
-          });
+        await fetch(`${WEATHER_API_URL}/weather/?lat=${lat}&lon=${long}&units=metric&APPID=${process.env.REACT_APP_WEATHER_API_KEY}`)
+        .then(res => res.json())
+        .then(result => {
+          setData(result);
+         
+        });
     };
 
     if (lat !== null && long !== null) {
