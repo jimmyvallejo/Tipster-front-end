@@ -68,7 +68,7 @@ const Login = () => {
 
           {error && <p>Error: {error}</p>}
           <div>
-            <button type="submit">
+            <button className="loginBtn" type="submit">
               <img id="loginImg" src="https://cdn-icons-png.flaticon.com/512/854/854184.png"></img>
             </button>
           </div>
