@@ -31,10 +31,10 @@ const getStripe = () => {
           quantity: 1,
         },
       ],
-      mode: 'subscription',
-      successUrl: `http://localhost:3000`,
-      cancelUrl: `http://localhost:3000`,
-      customerEmail: 'customer@email.com',
+      mode: "subscription",
+      successUrl: `https://tipster-app.netlify.app/`,
+      cancelUrl: `https://tipster-app.netlify.app/`,
+      customerEmail: "customer@email.com",
     });
     if (error) {
       console.warn(error.message);
