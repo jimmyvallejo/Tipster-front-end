@@ -127,7 +127,6 @@ const Profile = ({ setIsBackgroundDimmed, isBackgroundDimmed}) => {
 
   return (
     <div className="profile">
-      
       {edit && (
         <div className="profileEdit">
           <form
@@ -174,10 +173,11 @@ const Profile = ({ setIsBackgroundDimmed, isBackgroundDimmed}) => {
               name="profile_image"
               className="form-control-file"
               onChange={handleFileSubmit}
-             
             />
 
-            <button className="profileBtn" type="submit">Edit</button>
+            <button className="profileBtn" type="submit">
+              Edit
+            </button>
             {error && <p>Error: {error}</p>}
             <Link className="deleteUser" onClick={handleDelete}>
               <img src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png"></img>
@@ -193,15 +193,19 @@ const Profile = ({ setIsBackgroundDimmed, isBackgroundDimmed}) => {
           </form>
         </div>
       )}
-      { user.username == authUser.username ? <Link className="settings" onClick={handleEdit}>
-        Edit Profile
-      </Link>
-      :
-      <div></div>
-      }
+      {user.username == authUser.username ? (
+        <Link className="settings" onClick={handleEdit}>
+          Edit Profile
+        </Link>
+      ) : (
+        <div></div>
+      )}
+      {authUser.username == user.username ? 
       <h1>
         Hello <span>{user.name}</span>
       </h1>
+      : <h1></h1>
+         }
 
       {user ? (
         <>
@@ -217,9 +221,15 @@ const Profile = ({ setIsBackgroundDimmed, isBackgroundDimmed}) => {
               alt="default-profile"
             ></img>
           )}
-          <p>Name: {user.name}</p>
-          <p>Username: {user.username}</p>
-          { user.email == authUser.email ? <p>Email: {user.email}</p> : <p></p>}
+          <div className="credentials">
+            <p>Name: {user.name}</p>
+            <p>Username: {user.username}</p>
+            {user.email == authUser.email ? (
+              <p>Email: {user.email}</p>
+            ) : (
+              <p></p>
+            )}
+          </div>
         </>
       ) : (
         <h4>Loading...</h4>
@@ -229,7 +239,7 @@ const Profile = ({ setIsBackgroundDimmed, isBackgroundDimmed}) => {
         {userTips ? (
           <>
             {userTips.map((tip) => {
-              return <Tip key={tip._id} tip={tip} getTip={getTip}/>;
+              return <Tip key={tip._id} tip={tip} getTip={getTip} />;
             })}
           </>
         ) : (
