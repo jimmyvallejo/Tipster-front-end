@@ -70,9 +70,9 @@ const Tip = ({ tip, dimBackground, getTip}) => {
       <div className="tipContainer">
         <div className="tipbox" key={tip._id}>
           <div className="tipImgName">
-            <div className="tipImgBox">
+            
               <img className="profilepic" src={tip.ownerpicture}></img>
-            </div>
+            
             <p className="tipOwner">{tip.owner}</p>
             <p className="timeDate">{hoursAgo}h</p>
           </div>

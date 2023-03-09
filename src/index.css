@@ -150,7 +150,7 @@ background-color: white;
   align-items: center;
   justify-content: center;
   position: fixed;
-  left: 19%;
+  left: 18.7%;
   font-size: 22px;
   top: 70px;
 }
@@ -376,8 +376,9 @@ background-color: white;
 }
 
 .profilepic {
-  height: 60px;
-  padding:5px
+  height: 65px;
+  margin-top: 5px;
+  border-radius: 40px;
 }
 
 .profile h3{
@@ -435,14 +436,6 @@ text-align: center;
 }
 
 
-.tipImgBox {
-
-  border: 1px solid black;
-  border-radius: 50px;
-  
-  
-  
-  }
 
   .tipText {
     margin-left: 90px;
@@ -481,7 +474,6 @@ margin-top: 100px;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-right: 50px;
 
 }
 
