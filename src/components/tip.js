@@ -73,10 +73,12 @@ const Tip = ({ tip, dimBackground, getTip}) => {
       <div className="tipContainer">
         <div className="tipbox" key={tip._id}>
           <div className="tipImgName">
-            <Link to={`${baseUrl}/users/profile/${tip.owner}`}>
+             {authUser ? <Link to={`/users/profile/${tip.owner}`}>
               <img className="profilepic" src={tip.ownerpicture}></img>
             </Link>
-
+            :
+            <img className="profilepic" src={tip.ownerpicture}></img>
+              }
             <p className="tipOwner">{tip.owner}</p>
             <p className="timeDate">{hoursAgo}h</p>
           </div>

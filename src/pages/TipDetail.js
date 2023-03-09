@@ -198,7 +198,7 @@ useEffect(() => {
               <p className="category">Category: {tip.category}</p>
               {tip.likes && (
                 <Link className="likes" onClick={addLike}>
-                  <p>
+                  <p className="detailHeart">
                     <img
                       class="heart"
                       src="https://cdn-icons-png.flaticon.com/512/833/833472.png"
@@ -320,7 +320,7 @@ useEffect(() => {
         </div>
       )}
 
-      <h3>Comments:</h3>
+      <h3 className="detailComments">Comments:</h3>
       <div className="countries-container">
         {comments && comments.length > 0 ? (
           <>

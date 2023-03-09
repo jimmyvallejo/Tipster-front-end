@@ -87,8 +87,8 @@ const AddTip = () => {
             <form encType="multipart/form-data">
             <div>
                      <label id="locationLabel" for="category">Location: </label>
-                    <input className="locationInput" type='text' name="location" onChange={handleLocation} onBlur={handleLocationBlur} value={newTip.location} placeholder="Let us Know!" /></div>
-                <input className="commentInput" type='text' name="text" onChange={handleChange} value={newTip.text} placeholder="Sharing is caring!" />
+                    <input className="locationInput" type='text' name="location" onChange={handleLocation} onBlur={handleLocationBlur} value={newTip.location} placeholder="Location/City/State" /></div>
+                <input className="commentInput" type='text' name="text" onChange={handleChange} value={newTip.text} placeholder="Sharing is caring!" required/>
                 
                
          

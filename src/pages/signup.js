@@ -47,29 +47,56 @@ const Signup = () => {
     } 
 
     return (
-        <div className="signup">
-            <h1>Signup</h1>
-            <form className="signupform" onSubmit={handleSubmit}>
+      <div className="signup">
+        <h1>Signup</h1>
+        <form className="signupform" onSubmit={handleSubmit}>
+          <label>Username</label>
+          <input
+            type="text"
+            name="username"
+            value={newUser.username}
+            onChange={handleChange}
+            required
+          ></input>
 
-            <label>Username</label>
-                <input type='text' name="username" value={newUser.username} onChange={handleChange} required ></input>
-               
-                <label>Name</label>
-                <input type='text' name="name" value={newUser.name} onChange={handleChange} required ></input>
+          <label>Name</label>
+          <input
+            type="text"
+            name="name"
+            value={newUser.name}
+            onChange={handleChange}
+            required
+          ></input>
 
-                <label>Email</label>
-                <input type='email' name="email" value={newUser.email} onChange={handleChange} pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required ></input>
+          <label>Email</label>
+          <input
+            type="email"
+            name="email"
+            value={newUser.email}
+            onChange={handleChange}
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            required
+          ></input>
 
-                <label>Password</label>
-                <input type='password' name="password" value={newUser.password} onChange={handleChange} required ></input>
+          <label>Password</label>
+          <input
+            type="password"
+            name="password"
+            value={newUser.password}
+            onChange={handleChange}
+            required
+          ></input>
 
-                <button type="submit">Sign Up</button>
-                {error && <p>Error: {error}</p>}
-
-            </form>
-
-        </div>
-    )
+          <button type="submit">
+            <img
+              id="loginImg"
+              src="https://cdn-icons-png.flaticon.com/512/854/854184.png"
+            ></img>
+          </button>
+          {error && <p>Error: {error}</p>}
+        </form>
+      </div>
+    );
 }
 
 export default Signup

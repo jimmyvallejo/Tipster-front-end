@@ -389,9 +389,8 @@ body {
 }
 
 .commentimgbox {
-  border: 1px solid black;
+  
   width: 70px;
-  border-radius: 40px;
   margin-left: 5px;
   padding-left: 3px;
 }
@@ -716,9 +715,27 @@ footer a:hover {
   margin-top: 120px;
 }
 
+.signup input{
+ border-radius: 15px; 
+ font-size: 15px;
+ 
+}
+
+.signup label{
+ margin-top: 10px;
+  font-size: 20px;
+}
+
+.signup button {
+  margin-top: 20px;
+    cursor: pointer;
+  border: none;
+}
+
 .signup h1 {
   text-align: center;
   margin-right: 15px;
+  font-size: 40px;
 }
 
 .tipLink {
@@ -934,4 +951,13 @@ footer a:hover {
 
 .commentBox {
   min-height: 210px;
+}
+
+.detailComments {
+  text-align: center;
+}
+
+.detailHeart  {
+  position: relative;
+  left: 70px;
 }

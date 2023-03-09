@@ -59,7 +59,7 @@ const getStripe = () => {
             <div className="nav-links">
                 <span className="logo"><img className="logoimg" src="https://cdn-icons-png.flaticon.com/512/9215/9215053.png"></img>ipster</span>
                 <Link to={'/'}><img id="homeimg" src="https://cdn-icons-png.flaticon.com/512/25/25694.png"></img><span id="home">Home</span></Link>
-                <Link id="premiumlink" onClick={handleCheckout}><img id ="premiumimg" src="https://cdn-icons-png.flaticon.com/512/4148/4148878.png"></img> Premium</Link>
+                {authUser && <Link id="premiumlink" onClick={handleCheckout}><img id ="premiumimg" src="https://cdn-icons-png.flaticon.com/512/4148/4148878.png"></img> Premium</Link>}
                 {
                     getToken() ? 
                     <>

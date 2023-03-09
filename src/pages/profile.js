@@ -219,7 +219,7 @@ const Profile = ({ setIsBackgroundDimmed, isBackgroundDimmed}) => {
           )}
           <p>Name: {user.name}</p>
           <p>Username: {user.username}</p>
-          <p>Email: {user.email}</p>
+          { user.email == authUser.email ? <p>Email: {user.email}</p> : <p></p>}
         </>
       ) : (
         <h4>Loading...</h4>
