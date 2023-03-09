@@ -35,7 +35,7 @@ const Comment = ({ comment, setComments}) => {
   
   return (
     <div className="tipContainer">
-      <div className="tipbox" key={comment._id}>
+      <div className="tipbox commentBox" key={comment._id}>
         <div className="commentimgbox">
           <img className="profilepic" src={comment.ownerpicture}></img>
         </div>
@@ -49,8 +49,9 @@ const Comment = ({ comment, setComments}) => {
         <div className="tipExtras"></div>
         {authUser?.username === comment.owner && (
           <div className="commentChange">
-            
-            <Link className='edit delete' onClick={handleDelete}>Delete</Link>{" "}
+            <Link className="edit delete" onClick={handleDelete}>
+              Delete
+            </Link>{" "}
           </div>
         )}
       </div>

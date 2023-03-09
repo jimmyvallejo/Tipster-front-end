@@ -980,3 +980,8 @@ border: none;
 .loginBtn {
   background-color: white;
 }
+
+
+.commentBox {
+  min-height: 230px;
+}
