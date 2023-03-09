@@ -150,7 +150,7 @@ background-color: white;
   align-items: center;
   justify-content: center;
   position: fixed;
-  left: 18.7%;
+  left: 18.0%;
   font-size: 22px;
   top: 70px;
 }
@@ -379,6 +379,7 @@ background-color: white;
   height: 65px;
   margin-top: 5px;
   border-radius: 40px;
+  max-width: 65px;
 }
 
 .profile h3{
@@ -535,6 +536,7 @@ background-color: white
   margin-top: 10px;
   padding: 20px;
   background-color: white;
+  border-radius: 15px;
 }
 
 .commentbox form{
@@ -626,7 +628,7 @@ top:15px;
 .tipForm button{
 position: relative;
 top: 105px;
-right: 0px;
+right: 30px;
 background-color: #87CEFA;
  border: none;
  border-radius: 50px;

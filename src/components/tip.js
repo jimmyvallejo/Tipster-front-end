@@ -63,6 +63,9 @@ const Tip = ({ tip, dimBackground, getTip}) => {
     setLong(response.data.results[0].geometry.location.lng);
   }
    
+   const handleToTop = () => {
+     window.scrollTo(0, 0);
+   };
 
 
 
@@ -70,9 +73,8 @@ const Tip = ({ tip, dimBackground, getTip}) => {
       <div className="tipContainer">
         <div className="tipbox" key={tip._id}>
           <div className="tipImgName">
-            
-              <img className="profilepic" src={tip.ownerpicture}></img>
-            
+            <img className="profilepic" src={tip.ownerpicture}></img>
+
             <p className="tipOwner">{tip.owner}</p>
             <p className="timeDate">{hoursAgo}h</p>
           </div>
@@ -86,7 +88,9 @@ const Tip = ({ tip, dimBackground, getTip}) => {
             )}
           </Link>
           <div className="expand">
-            <button className="handleExpand" onClick={handleExpand}>Expand Location</button>
+            <button className="handleExpand" onClick={handleExpand}>
+              Expand Location
+            </button>
           </div>
 
           <>
@@ -118,7 +122,13 @@ const Tip = ({ tip, dimBackground, getTip}) => {
                 </p>
               </Link>
               {authUser ? (
-                <Link className="link" onClick={handleClick}>
+                <Link
+                  className="link"
+                  onClick={() => {
+                    handleClick();
+                    handleToTop();
+                  }}
+                >
                   <p>
                     <img
                       class="heart"
