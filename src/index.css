@@ -160,6 +160,14 @@ body {
   }
 }
 
+@media (max-width: 1750px) {
+  .SearchBar {
+    left: 75%;
+    font-size: 14px;
+  }
+}
+
+
 .nav-links img {
   height: 50px;
 }
