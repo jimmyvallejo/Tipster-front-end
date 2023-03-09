@@ -139,9 +139,9 @@ body {
   top: 70px;
 }
 
-@media (max-width: 1650px) {
+@media (max-width: 1750px) {
   .nav-links {
-    left: 10%;
+    left: 12%;
     font-size: 17px;
   }
 }
@@ -182,7 +182,13 @@ body {
   font-size: 16;
 }
 
-
+  @media screen and (max-width: 1750px) {
+  .weather {
+    
+    left: 75%;
+   
+  }
+}
 
   @media screen and (max-width: 1550px) {
   .weather {
