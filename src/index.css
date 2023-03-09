@@ -847,16 +847,18 @@ footer a:hover {
   top: 70px;
 }
 
-#profileForm button {
+.profileBtn{
   position: relative;
-  top: 25px;
+  top: 20px;
   padding: 20px;
   cursor: pointer;
   pointer-events: auto;
+  border-radius: 15px;
 }
 
 .detailEditBtn {
-  margin-top: 10px;
+  position: relative;
+  top: 45px;
 }
 
 #categoryEdit {

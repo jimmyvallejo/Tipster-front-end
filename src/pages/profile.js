@@ -177,7 +177,7 @@ const Profile = ({ setIsBackgroundDimmed, isBackgroundDimmed}) => {
              
             />
 
-            <button type="submit">Edit</button>
+            <button className="profileBtn" type="submit">Edit</button>
             {error && <p>Error: {error}</p>}
             <Link className="deleteUser" onClick={handleDelete}>
               <img src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png"></img>
@@ -193,9 +193,12 @@ const Profile = ({ setIsBackgroundDimmed, isBackgroundDimmed}) => {
           </form>
         </div>
       )}
-      <Link className="settings" onClick={handleEdit}>
+      { user.username == authUser.username ? <Link className="settings" onClick={handleEdit}>
         Edit Profile
       </Link>
+      :
+      <div></div>
+      }
       <h1>
         Hello <span>{user.name}</span>
       </h1>
