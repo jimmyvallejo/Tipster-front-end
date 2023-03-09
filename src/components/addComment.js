@@ -62,7 +62,7 @@ const Comment = ({commentOwner, commentKey, commentText, authUser, isBackgroundD
                     <h3 className="exitComment"><Link className="handleExit" onClick={handleExit}>Exit</Link></h3>
                 </div>
                 <p className="tipText">{commentText}</p>
-                <p>Replying to @{commentOwner}</p>
+                <p className="replying">Replying to @{commentOwner}</p>
                 <div className="tipImgName">
                     <div className="tipImgBox"><img className="profilepic" src={authUser.image}/></div>
                     <form>

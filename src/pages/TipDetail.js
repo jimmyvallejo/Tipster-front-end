@@ -267,7 +267,7 @@ useEffect(() => {
                   />
                 </div>
                 <div className="textDetailEdit">
-                  <label htmlFor="username">Text: </label>
+                  <label className="textEditDetail" htmlFor="username">Text: </label>
                   <input
                     type="text"
                     id="text"

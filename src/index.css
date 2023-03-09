@@ -881,7 +881,7 @@ footer a:hover {
 
 .textDetailEdit {
   position: relative;
-  left: 53px;
+  left: 45px;
   top: 10px;
   font-size: 18px;
 }
@@ -892,7 +892,11 @@ footer a:hover {
 
 #text {
   padding-bottom: 50px;
+  border-radius: 20px;
+  width: 195px;
 }
+
+
 
 .tipEditBack {
   text-align: center;
@@ -912,6 +916,7 @@ footer a:hover {
 .detailEditBtn {
   position: relative;
   top: 45px;
+  border-radius: 20px;
 }
 
 #categoryEdit {
@@ -1000,4 +1005,10 @@ footer a:hover {
 .detailHeart  {
   position: relative;
   left: 70px;
+}
+
+.replying {
+  padding-top: 30px;
+  margin-left: 90px;
+
 }
