@@ -142,12 +142,21 @@ body {
 @media (max-width: 1650px) {
   .nav-links {
     left: 10%;
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 1550px) {
+  .nav-links {
+    left: 12%;
+    font-size: 16px
   }
 }
 
 @media (max-width: 1300px) {
   .nav-links {
     left: 0%;
+    font-size: 14px;
   }
 }
 
@@ -173,17 +182,20 @@ body {
   font-size: 16;
 }
 
-@media screen and (max-width: 1650px) {
+
+
+  @media screen and (max-width: 1550px) {
   .weather {
     background-color: white;
-    left: 85%;
+    left: 78%;
+    
   }
 
   .main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 200px;
+    
     background-color: white;
   }
 
@@ -191,7 +203,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100px;
+    width: 50px;
   }
 
   .temp {
@@ -207,10 +219,18 @@ body {
   }
 
   .top {
-    width: 120px;
+    
   }
   .header {
     width: 100%;
+  }
+}
+
+  @media screen and (max-width: 1350px) {
+  .weather {
+    background-color: white;
+    left: 78%;
+    opacity: 0;
   }
 }
 
