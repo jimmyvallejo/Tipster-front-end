@@ -87,7 +87,7 @@ const Signup = () => {
             required
           ></input>
 
-          <button type="submit">
+          <button className="signupBtn" type="submit">
             <img
               id="loginImg"
               src="https://cdn-icons-png.flaticon.com/512/854/854184.png"

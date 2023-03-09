@@ -975,6 +975,10 @@ footer a:hover {
   background-color: white;
 }
 
+.signupBtn {
+  background-color: white;
+}
+
 .commentBox {
   min-height: 210px;
 }
