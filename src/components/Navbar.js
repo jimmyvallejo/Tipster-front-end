@@ -2,9 +2,8 @@ import { Link } from "react-router-dom"
 import { useContext } from "react"
 import { LoadingContext } from "../context/loading.context"
 import { AuthContext } from "../context/auth.context"
-import Tip from "./tip"
 import { loadStripe } from '@stripe/stripe-js';
-import { baseUrl } from "../services/baseUrl"
+
 
 
 const Navbar = ({handleDimNav}) => {

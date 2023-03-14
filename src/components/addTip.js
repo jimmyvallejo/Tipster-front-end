@@ -10,7 +10,6 @@ const AddTip = () => {
     
     const {  getTips, } = useContext(LoadingContext)
 
-    const navigate = useNavigate()
 
     const [ newTip, newSetTip, setTip] = useState(
         {
