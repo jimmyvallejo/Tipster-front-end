@@ -141,22 +141,7 @@ body {
   top: 70px;
 }
 
-@media (max-width: 800px) {
-  .nav-links {
-   flex-direction: row;
-   top: 0px;
-   margin-left: 20px;
-   position:static;
-   width: 100vw;
-   
-  }
-}
 
-@media (max-width: 800px) {
-  .logo {
-      top: -10px;
-  }
-}
 
 .logo {
   position: relative;
@@ -192,6 +177,20 @@ body {
     font-size: 14px;
   }
 }
+
+@media (max-width: 800px) {
+  .SearchBar {
+   left: 5px;
+   margin-top: 425px;
+  }
+}
+
+@media(max-width: 800px) {
+  .SearchBar input {
+    max-width: 250px;
+  }
+}
+
 
 
 .nav-links img {
@@ -379,8 +378,7 @@ body {
 
 @media (max-width: 800px) {
   .app{
-     width: 100vw;
-     margin-top: 300px;
+    
   }
 }
 
