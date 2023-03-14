@@ -186,15 +186,20 @@ body {
 }
 
 
-
-
-
 @media (max-width: 1750px) {
   .SearchBar {
     left: 75%;
     font-size: 14px;
   }
 }
+
+@media (max-width: 800px) {
+  .nav-links {
+    position: absolute;
+    
+  }
+}
+
 
 
 
@@ -386,11 +391,6 @@ body {
   }
 }
 
-@media (max-width: 800px) {
-  .app{
-    
-  }
-}
 
 .app {
   margin-top: -90px;
