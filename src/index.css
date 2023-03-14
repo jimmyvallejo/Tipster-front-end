@@ -345,6 +345,15 @@ body {
   border-radius: 15px;
 }
 
+
+
+
+@media (max-width: 800px) {
+  .tipbox {
+     width: 100vw;
+  }
+}
+
 #tipdetail {
   border: 3px solid black;
   min-width: 800px;
