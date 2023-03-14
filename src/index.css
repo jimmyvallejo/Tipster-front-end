@@ -150,6 +150,20 @@ body {
   font-weight: bold;
 }
 
+@media (max-width: 800px) {
+  .logo {
+  bottom: 7px;
+  }
+}
+
+@media (max-width: 1750px) {
+  .nav-links img {
+   width: 30px;
+   max-height: 30px;
+  }
+}
+
+
 @media (max-width: 1750px) {
   .nav-links {
     left: 12%;
@@ -171,25 +185,50 @@ body {
   }
 }
 
+@media (max-width: 800px) {
+  .nav-links {
+  position: relative;
+  flex-direction: row;
+  top: 50px;
+  padding-top: 30px;
+  font-size: 15px;
+  }
+}
+
+@media (max-width: 800px) {
+  .nav-links .logo {
+    font-size: 0px;
+    right: 40px;
+  }
+}
+
+@media (max-width: 800px) {
+  .nav-links .logo {
+    font-size: 0px;
+    right: 40px;
+  }
+}
+
 @media (max-width: 1750px) {
   .SearchBar {
     left: 75%;
     font-size: 14px;
   }
 }
-
 @media (max-width: 800px) {
   .SearchBar {
-   left: 5px;
-   margin-top: 425px;
+    position: relative;
+    left: 30000px;
   }
 }
 
-@media(max-width: 800px) {
-  .SearchBar input {
-    max-width: 250px;
+@media (max-width: 800px) {
+  .app {
+   width: 100vw;
   }
 }
+
+
 
 
 
