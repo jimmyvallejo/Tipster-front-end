@@ -200,6 +200,14 @@ body {
   }
 }
 
+@media (max-width: 800px) {
+  .SearchBar {
+    position: absolute;
+    opacity: 0;
+    
+  }
+}
+
 
 
 
