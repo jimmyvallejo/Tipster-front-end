@@ -4,8 +4,10 @@
   min-height: 100vh;
 }
 
-body {
-  min-width: 1100px !important;
+ body {
+  width: 101.4%;
+  position: relative;
+  bottom: 9px;
 }
 
 * {
@@ -15,7 +17,7 @@ body {
 .dimmed {
   background-color: rgba(128, 128, 128, 0.65);
   pointer-events: none;
-  margin: 0;
+  margin-right: 0;
   padding: 0;
   margin-top: -100px;
 }
@@ -150,11 +152,7 @@ body {
   font-weight: bold;
 }
 
-@media (max-width: 800px) {
-  .logo {
-  bottom: 7px;
-  }
-}
+
 
 @media (max-width: 1750px) {
   .nav-links img {
@@ -192,26 +190,6 @@ body {
     font-size: 14px;
   }
 }
-
-@media (max-width: 800px) {
-  .nav-links {
-    position: absolute;
-    
-  }
-}
-
-@media (max-width: 800px) {
-  .SearchBar {
-    position: absolute;
-    opacity: 0;
-    
-  }
-}
-
-
-
-
-
 
 
 
