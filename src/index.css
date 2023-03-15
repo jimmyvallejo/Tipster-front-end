@@ -272,6 +272,115 @@
   }
 }
 
+@media (max-width: 800px) {
+  #homeimg{
+  position:relative;
+  right: 65px;
+  top: 12px;
+  }
+}
+
+@media (max-width: 800px) {
+  #home{
+  position:relative;
+  right: 60px;
+  font-size: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  #premiumimg{
+ position: relative;
+ right: 40px;
+
+  }
+}
+
+@media (max-width: 800px) {
+  #premiumtext{
+ position: relative;
+ right: 60px;
+
+  }
+}
+
+@media (max-width: 800px) {
+  #profileimg{
+ position: relative;
+ right: 25px;
+ height: 27px;
+
+  }
+}
+
+@media (max-width: 800px) {
+  #profiletext{
+ position: relative;
+ right: 30px;
+ top: 3px;
+
+  }
+}
+
+@media (max-width: 800px) {
+  #postimg{
+ position: relative;
+ right: 10px;
+ height: 25px;
+  }
+}
+
+@media (max-width: 800px) {
+  #posttxt{
+ position: relative;
+ right: 10px;
+ top: 5px;
+  }
+}
+
+@media (max-width: 800px) {
+  .logout{
+ position: relative;
+     top: -2px;
+     right: 5px;
+  }
+}
+
+@media (max-width: 800px) {
+  #signupimg{
+ position: relative;
+     top: 10px;
+     right: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  #signuptxt{
+ position: relative;
+     right: 17px;
+     top: 2px;
+  }
+}
+
+@media (max-width: 800px) {
+  #loginimg{
+ position: relative;
+    top: 15px;
+  }
+}
+
+@media (max-width: 800px) {
+  #logintxt{
+ position: relative;
+    top:3px;
+    left: 6px;
+  }
+}
+
+
+
+
+
 #category {
   position: relative;
   left: 80px;
@@ -1058,11 +1167,11 @@ footer a:hover {
 
 #login {
   margin-top: 5%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   margin-right: 50px;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 #login h1 {
@@ -1074,6 +1183,7 @@ footer a:hover {
 #login label {
   font-size: 20px;
   padding-left: 10px;
+  text-align: center;
 }
 
 #login input {
@@ -1083,21 +1193,22 @@ footer a:hover {
 
 #login button {
   font-size: 20px;
-  position: relative;
-  left: 255px;
-  top: 20px;
   cursor: pointer;
   border: none;
+  margin-left: 110px;
+  margin-top: 50px;
+}
+
+
+
+.passwordInput {
+margin-left: -40px ;
+margin-top: 10px;
 }
 
 .passwordLabel {
-  position: relative;
-  left: 25px;
-}
-
-.passwordInput {
-  position: relative;
-  left: 25px;
+position:relative;
+right: 37px;
 }
 
 #loginImg {
