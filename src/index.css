@@ -207,7 +207,7 @@ body {
     width: 200px !important;
     position: relative !important;
     top: -135px !important;
-    left: 90px;
+    left: 95px;
   }
 }
 
@@ -252,6 +252,7 @@ body {
     position: relative;
     left: 53px !important;
     top: 1px;
+    color: black;
   }
 }
 
@@ -416,13 +417,14 @@ body {
     position: relative;
     left: 22px !important ;
     top: 10px !important;
+    color: black;
   }
 }
 
 @media (max-width: 800px) {
   #homeh2 {
     padding-bottom: 35px !important;
-    margin-left: 10px !important;
+    margin-left: 15px !important;
   }
 }
 
@@ -430,7 +432,7 @@ body {
 
 @media (max-width: 800px) {
   .whoIsPosting{
-   margin-left: 20px;
+   margin-left: 25px;
   }
 }
 
