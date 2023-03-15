@@ -4,7 +4,7 @@
   min-height: 100vh;
 }
 
- body {
+body {
   width: 101.4%;
   position: relative;
   bottom: 9px;
@@ -143,8 +143,6 @@
   top: 70px;
 }
 
-
-
 .logo {
   position: relative;
   right: 5px;
@@ -152,15 +150,12 @@
   font-weight: bold;
 }
 
-
-
 @media (max-width: 1750px) {
   .nav-links img {
-   width: 30px;
-   max-height: 30px;
+    width: 30px;
+    max-height: 30px;
   }
 }
-
 
 @media (max-width: 1750px) {
   .nav-links {
@@ -172,7 +167,7 @@
 @media (max-width: 1550px) {
   .nav-links {
     left: 12%;
-    font-size: 16px
+    font-size: 16px;
   }
 }
 
@@ -183,7 +178,6 @@
   }
 }
 
-
 @media (max-width: 1750px) {
   .SearchBar {
     left: 75%;
@@ -192,195 +186,280 @@
 }
 
 @media (max-width: 800px) {
-  .nav-links  {
-  flex-direction: row;
-  position: relative !important;
-  right: 20px !important;
-  padding-right: 20px;
+  .nav-links {
+    flex-direction: row;
+    position: relative !important;
+    right: 20px !important;
+    padding-right: 20px;
   }
 }
 
 @media (max-width: 800px) {
-  .SearchBar input{
-  width: 200px !important;
-  position: absolute !important;
-  top: 50px;
+  .SearchBar input {
+    width: 200px !important;
+    position: absolute !important;
+    top: 150px;
   }
 }
 
 @media (max-width: 800px) {
   .SearchBar {
-  width: 200px !important;
-  position: absolute !important;
-  top: 50px;
-  }
-}
-
-
-
-@media (max-width: 800px) {
-  .tipContainer{
- width: 98vw !important;
-
+    width: 200px !important;
+    position: relative !important;
+    top: -135px !important;
+    left: 85px;
   }
 }
 
 @media (max-width: 800px) {
-  .tipbox{
-  width: 98vw !important;
-
+  .tipContainer {
+    width: 98vw !important;
   }
 }
 
 @media (max-width: 800px) {
-  .app{
-  width: 100vw;
-  position: relative;
-  left: 5px;
-
+  .tipbox {
+    width: 98vw !important;
   }
 }
 
 @media (max-width: 800px) {
-  .addButton{
-    position: absolute !important;
-    margin-top: 355px;
-
-  }
-}
-
-
-@media (max-width: 800px) {
-  .commentInput{
-  width: 62vw;
-
+  .app {
+    width: 100vw;
+    position: relative;
+    left: 5px;
   }
 }
 
 @media (max-width: 800px) {
-  #category{
-  position: relative;
-    left:60px !important;
-
+  .addButton {
+    position: relative !important;
+    top: 85px !important;
+    right: 57px !important;
   }
 }
 
 @media (max-width: 800px) {
-  #label{
-  font-size: 0 !important;
-
+  .commentInput {
+    width: 62vw;
   }
 }
 
 @media (max-width: 800px) {
-  #homeimg{
-  position:relative;
-  right: 65px;
-  top: 12px;
+  #category {
+    position: relative;
+    left: 53px !important;
+    top: 1px;
   }
 }
 
 @media (max-width: 800px) {
-  #home{
-  position:relative;
-  right: 60px;
-  font-size: 0;
+  #label {
+    font-size: 0 !important;
+    margin: 2px;
   }
 }
 
 @media (max-width: 800px) {
-  #premiumimg{
- position: relative;
- right: 40px;
-
+  #homeimg {
+    position: relative;
+    right: 65px;
+    top: 12px;
   }
 }
 
 @media (max-width: 800px) {
-  #premiumtext{
- position: relative;
- right: 60px;
-
+  #home {
+    position: relative;
+    right: 60px;
+    font-size: 0;
   }
 }
 
 @media (max-width: 800px) {
-  #profileimg{
- position: relative;
- right: 25px;
- height: 27px;
-
+  #premiumimg {
+    position: relative;
+    right: 40px;
   }
 }
 
 @media (max-width: 800px) {
-  #profiletext{
- position: relative;
- right: 30px;
- top: 3px;
-
+  #premiumtext {
+    position: relative;
+    right: 60px;
   }
 }
 
 @media (max-width: 800px) {
-  #postimg{
- position: relative;
- right: 10px;
- height: 25px;
+  #profileimg {
+    position: relative;
+    right: 25px;
+    height: 27px;
   }
 }
 
 @media (max-width: 800px) {
-  #posttxt{
- position: relative;
- right: 10px;
- top: 5px;
+  #profiletext {
+    position: relative;
+    right: 30px;
+    top: 3px;
   }
 }
 
 @media (max-width: 800px) {
-  .logout{
- position: relative;
-     top: -2px;
-     right: 5px;
+  #postimg {
+    position: relative;
+    right: 10px;
+    height: 25px;
   }
 }
 
 @media (max-width: 800px) {
-  #signupimg{
- position: relative;
-     top: 10px;
-     right: 20px;
+  #posttxt {
+    position: relative;
+    right: 10px;
+    top: 5px;
   }
 }
 
 @media (max-width: 800px) {
-  #signuptxt{
- position: relative;
-     right: 17px;
-     top: 2px;
+  .logout {
+    position: relative;
+    top: -2px;
+    right: 5px;
   }
 }
 
 @media (max-width: 800px) {
-  #loginimg{
- position: relative;
+  #signupimg {
+    position: relative;
+    top: 10px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  #signuptxt {
+    position: relative;
+    right: 17px;
+    top: 2px;
+  }
+}
+
+@media (max-width: 800px) {
+  #loginimg {
+    position: relative;
     top: 13px;
     left: 10px;
   }
 }
 
 @media (max-width: 800px) {
-  #logintxt{
- position: relative;
-    top:3px;
-    left:15px;
+  #logintxt {
+    position: relative;
+    top: 3px;
+    left: 15px;
+  }
+}
+
+@media (max-width: 800px) {
+  .link {
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 800px) {
+  .commentbox input {
+    width: 50vw !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .commentbox {
+    width: 95vw !important;
+    margin-left: 10px;
+    margin-top: 100px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  #commentButton {
+    position: static;
+    margin-left: 45px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .exitComment {
+    position: relative !important;
+    left: 170px !important;
+    margin-bottom: 50px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .mainButtons button {
+    padding-top: 65px;
+   
+    text-decoration: none;
+    color: black;
   }
 }
 
 
 
+@media (max-width: 800px) {
+  #tipSubmitImg {
+    position: relative;
+    left: 22px !important ;
+    top: 10px !important;
+  }
+}
 
+@media (max-width: 800px) {
+  #homeh2 {
+    padding-bottom: 35px !important;
+  }
+}
+
+#tipSubmitImg {
+  position: relative;
+  top: 20px;
+}
+
+.mainButtons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 70px;
+  padding-bottom: 10px;
+  margin-right: 20px;
+}
+
+.addComment {
+  border: 1px solid grey;
+  width: 700px;
+  margin-top: 10px;
+}
+
+.commentbox {
+  border: 1px solid grey;
+  width: 700px;
+  margin-top: 10px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.commentbox form {
+  margin-left: 15px;
+  pointer-events: auto;
+}
+
+.commentbox input {
+  width: 500px;
+  padding-bottom: 100px;
+}
 
 #category {
   position: relative;
@@ -410,25 +489,23 @@
   font-size: 16;
 }
 
-  @media screen and (max-width: 1750px) {
+@media screen and (max-width: 1750px) {
   .weather {
     left: 75%;
-   
   }
 }
 
-  @media screen and (max-width: 1550px) {
+@media screen and (max-width: 1550px) {
   .weather {
     background-color: white;
     left: 78%;
-    
   }
 
   .main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
     background-color: white;
   }
 
@@ -452,14 +529,13 @@
   }
 
   .top {
-    
   }
   .header {
     width: 100%;
   }
 }
 
-  @media screen and (max-width: 1350px) {
+@media screen and (max-width: 1350px) {
   .weather {
     background-color: white;
     left: 78%;
@@ -562,12 +638,6 @@
   border-radius: 15px;
 }
 
-
-
-
-
-
-
 .app {
   margin-top: -90px;
   margin-right: 30px;
@@ -654,13 +724,12 @@
 }
 
 .commentimgbox {
-  
   width: 70px;
   margin-left: 5px;
   padding-left: 3px;
 }
 
-.commentChange {
+.Change {
   position: relative;
   left: 550px;
   padding-top: 20px;
@@ -731,7 +800,7 @@ footer a:hover {
 .mainButtons {
   display: flex;
   justify-content: space-around;
-  margin-top: 65px;
+  margin-top: 70px;
   padding-bottom: 10px;
   margin-right: 20px;
 }
@@ -980,20 +1049,19 @@ footer a:hover {
   margin-top: 120px;
 }
 
-.signup input{
- border-radius: 15px; 
- font-size: 15px;
- 
+.signup input {
+  border-radius: 15px;
+  font-size: 15px;
 }
 
-.signup label{
- margin-top: 10px;
+.signup label {
+  margin-top: 10px;
   font-size: 20px;
 }
 
 .signup button {
   margin-top: 20px;
-    cursor: pointer;
+  cursor: pointer;
   border: none;
 }
 
@@ -1125,15 +1193,13 @@ footer a:hover {
   width: 195px;
 }
 
-
-
 .tipEditBack {
   text-align: center;
   position: relative;
   top: 70px;
 }
 
-.profileBtn{
+.profileBtn {
   position: relative;
   top: 20px;
   padding: 20px;
@@ -1200,16 +1266,14 @@ footer a:hover {
   margin-top: 50px;
 }
 
-
-
 .passwordInput {
-margin-left: -40px ;
-margin-top: 10px;
+  margin-left: -40px;
+  margin-top: 10px;
 }
 
 .passwordLabel {
-position:relative;
-right: 37px;
+  position: relative;
+  right: 37px;
 }
 
 #loginImg {
@@ -1233,7 +1297,7 @@ right: 37px;
   text-align: center;
 }
 
-.detailHeart  {
+.detailHeart {
   position: relative;
   left: 70px;
 }
@@ -1241,7 +1305,6 @@ right: 37px;
 .replying {
   padding-top: 30px;
   margin-left: 90px;
-
 }
 
 .credentials {

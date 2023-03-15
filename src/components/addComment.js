@@ -67,7 +67,7 @@ const Comment = ({commentOwner, commentKey, commentText, authUser, isBackgroundD
                     <div className="tipImgBox"><img className="profilepic" src={authUser.image}/></div>
                     <form>
                         <input className="commentText" type='text' name="text" onChange={handleChange} value={newComment.text} placeholder="Sharing is caring!" />
-                        <button onClick={handleSubmit} type="submit">Submit</button>
+                        <button id="commentButton" onClick={handleSubmit} type="submit">Submit</button>
                     </form>
                 </div>
             </div>

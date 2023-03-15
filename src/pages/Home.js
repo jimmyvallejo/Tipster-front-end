@@ -78,10 +78,10 @@ const Home = ({ dimBackground, isBackgroundDimmed, setIsBackgroundDimmed }) => {
         <p></p>
       )}
 
-      <h2>Home</h2>
+      <h2 id="homeh2">Home</h2>
       {authUser && <AddTip />}
       <div className="mainButtons">
-        <button onClick={() => {filterTipList("Food")}}>Dining</button>
+        <button className="mainbutton" onClick={() => {filterTipList("Food")}}>Dining</button>
         <button onClick={() => filterTipList("Traffic")}>Traffic</button>
         <button onClick={() => filterTipList("Entertainment")}>
           Entertainment
