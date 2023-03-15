@@ -194,7 +194,9 @@
 @media (max-width: 800px) {
   .nav-links  {
   flex-direction: row;
-  position: relative;
+  position: relative !important;
+  right: 20px !important;
+  padding-right: 20px;
   }
 }
 
@@ -218,14 +220,14 @@
 
 @media (max-width: 800px) {
   .tipContainer{
-  max-width: 100vw !important;
+ width: 98vw !important;
 
   }
 }
 
 @media (max-width: 800px) {
   .tipbox{
-  width: 100vw !important;
+  width: 98vw !important;
 
   }
 }
@@ -233,6 +235,8 @@
 @media (max-width: 800px) {
   .app{
   width: 100vw;
+  position: relative;
+  left: 5px;
 
   }
 }
@@ -245,6 +249,34 @@
   }
 }
 
+
+@media (max-width: 800px) {
+  .commentInput{
+  width: 62vw;
+
+  }
+}
+
+@media (max-width: 800px) {
+  #category{
+  position: relative;
+    left:60px !important;
+
+  }
+}
+
+@media (max-width: 800px) {
+  #label{
+  font-size: 0 !important;
+
+  }
+}
+
+#category {
+  position: relative;
+  left: 80px;
+  font-size: 17px;
+}
 
 .nav-links img {
   height: 50px;
