@@ -237,7 +237,7 @@ body {
   .addButton {
     position: relative !important;
     top: 85px !important;
-    right: 57px !important;
+    right: 67px !important;
   }
 }
 
@@ -433,6 +433,12 @@ body {
 @media (max-width: 800px) {
   .whoIsPosting{
    margin-left: 25px;
+  }
+}
+
+@media (max-width: 800px) {
+  .addPic{
+   color: black;
   }
 }
 
