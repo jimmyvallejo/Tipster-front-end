@@ -207,19 +207,21 @@ body {
     width: 200px !important;
     position: relative !important;
     top: -135px !important;
-    left: 85px;
+    left: 90px;
   }
 }
 
 @media (max-width: 800px) {
   .tipContainer {
     width: 98vw !important;
+    
   }
 }
 
 @media (max-width: 800px) {
   .tipbox {
     width: 98vw !important;
+   
   }
 }
 
@@ -420,7 +422,24 @@ body {
 @media (max-width: 800px) {
   #homeh2 {
     padding-bottom: 35px !important;
+    margin-left: 10px !important;
   }
+}
+
+
+
+@media (max-width: 800px) {
+  .whoIsPosting{
+   margin-left: 20px;
+  }
+}
+
+
+.profilepic {
+  height: 65px;
+  margin-top: 5px;
+  border-radius: 40px;
+  max-width: 65px;
 }
 
 #tipSubmitImg {

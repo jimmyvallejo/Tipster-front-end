@@ -82,7 +82,7 @@ const AddTip = () => {
     
     return (
         <div className="tipImgName tipForm">
-            <div className="tipImgBox"><img className="profilepic" src={authUser.image} /></div>
+            <div className="tipImgBox"><img className="profilepic whoIsPosting" src={authUser.image} /></div>
             <form encType="multipart/form-data">
             <div>
                      <label id="locationLabel" for="category">Location: </label>
