@@ -2,7 +2,7 @@
 
 # https://tipster-app.netlify.app/
 
-
+-- Backend located here --> https://github.com/jimmyvallejo/tipster-react-project/tree/main/server
 
 -- Project made using React, Express and MongoDb
 
