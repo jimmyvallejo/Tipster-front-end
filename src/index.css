@@ -268,10 +268,20 @@ body {
 @media (max-width: 800px) {
   #homeimg {
     position: relative;
-    right: 60px;
+    right: 12px;
     top: 16px;
   }
 }
+
+@media (max-width: 800px) {
+  .logo {
+    position: relative;
+    right: 37px;
+    top: 0px;
+    font-size: 0;
+  }
+}
+
 
 @media (max-width: 800px) {
   #home {
@@ -284,7 +294,8 @@ body {
 @media (max-width: 800px) {
   #premiumimg {
     position: relative;
-    right: 30px;
+    left: 0px;
+    top: 16px;
   }
 }
 
@@ -292,14 +303,16 @@ body {
   #premiumtext {
     position: relative;
     right: 50px;
+    font-size: 0;
   }
 }
 
 @media (max-width: 800px) {
   #profileimg {
     position: relative;
-    right: 25px;
+    left: 45px;
     height: 27px;
+    top:15px;
   }
 }
 
@@ -308,14 +321,16 @@ body {
     position: relative;
     right: 30px;
     top: 3px;
+    font-size: 0;
   }
 }
 
 @media (max-width: 800px) {
   #postimg {
     position: relative;
-    right: 10px;
-    height: 25px;
+    left: 30px;
+    height: 10px;
+    top: -15px;
   }
 }
 
@@ -324,14 +339,18 @@ body {
     position: relative;
     right: 10px;
     top: 5px;
+    font-size: 0;
   }
 }
 
 @media (max-width: 800px) {
   .logout {
     position: relative;
-    top: -2px;
-    right: 5px;
+    top: 2px;
+    left:40px;
+    font-size: 12px !important;
+    width: 70px;
+    text-align: center;
   }
 }
 
@@ -612,7 +631,7 @@ body {
 @media (max-width: 800px) {
   #shrinkProfile{
    max-width: 95vw;
-   margin-left: 180px;
+   margin-left: 140px;
  
   }
 }
@@ -620,7 +639,7 @@ body {
 
 @media (max-width: 800px) {
   .profileName{
-  margin-left: 180px;
+  margin-left: 150px;
   font-size: 22px;
   }
 }
@@ -681,7 +700,7 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
-   margin-left: 138px;
+   margin-left: 130px;
   }
 }
 
