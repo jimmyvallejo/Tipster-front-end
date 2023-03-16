@@ -209,7 +209,7 @@ useEffect(() => {
               )}
               {tip.comments && (
                 <Link id="commentLink" to={"/"}>
-                  <p>
+                  <p className="detailComment">
                     <img
                       class="heart"
                       src="https://cdn-icons-png.flaticon.com/512/3193/3193015.png"

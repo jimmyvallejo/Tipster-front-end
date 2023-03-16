@@ -28,6 +28,7 @@ body {
 
 .dimmed .SearchBar input {
   background-color: rgba(146, 144, 144, 0.65);
+  border-color:rgba(146, 144, 144, 0.65);
 }
 
 .dimmed .mainButtons input {
@@ -266,8 +267,8 @@ body {
 @media (max-width: 800px) {
   #homeimg {
     position: relative;
-    right: 65px;
-    top: 12px;
+    right: 60px;
+    top: 16px;
   }
 }
 
@@ -282,14 +283,14 @@ body {
 @media (max-width: 800px) {
   #premiumimg {
     position: relative;
-    right: 40px;
+    right: 35px;
   }
 }
 
 @media (max-width: 800px) {
   #premiumtext {
     position: relative;
-    right: 60px;
+    right: 55px;
   }
 }
 
@@ -336,24 +337,43 @@ body {
 @media (max-width: 800px) {
   #signupimg {
     position: relative;
-    top: 10px;
-    right: 20px;
+    top: 13px;
+    right: 15px;
   }
 }
 
 @media (max-width: 800px) {
   #signuptxt {
     position: relative;
-    right: 17px;
-    top: 2px;
+    right: 12px;
+    top: 4px;
   }
 }
 
 @media (max-width: 800px) {
   #loginimg {
     position: relative;
-    top: 13px;
-    left: 10px;
+    top: 15px !important;
+    left: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .loginBtn {
+    margin-top:25px !important;
+    margin-left: 70px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  #login {
+  margin-top: 50px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  #login h1{
+  margin-left: 20px;
   }
 }
 
@@ -361,7 +381,7 @@ body {
   #logintxt {
     position: relative;
     top: 3px;
-    left: 15px;
+    left: 25px;
   }
 }
 
@@ -403,7 +423,7 @@ body {
 
 @media (max-width: 800px) {
   .mainButtons button {
-    padding-top: 65px;
+    margin-top: 65px;
    
     text-decoration: none;
     color: black;
@@ -441,6 +461,112 @@ body {
    color: black;
   }
 }
+
+@media (max-width: 800px) {
+  .commentImgBox{
+   margin-bottom: 60px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .signup{
+   margin-top: 50px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .detailHeart{
+   position: relative;
+   left: 10px !important;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .detailComment{
+   position: relative;
+   right:10px !important;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .locationInput{
+   width: 200px;
+   position: relative;
+   right: 85px;
+  }
+}
+
+
+@media (max-width: 800px) {
+  #locationLabel{
+   width: 200px;
+   position: relative;
+   right: 85px;
+  }
+}
+
+@media (max-width: 800px) {
+  .tipEdit{
+   min-height: 500px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .textEditDetail{
+   position: relative;
+   right: 125px !important;
+  }
+}
+
+
+@media (max-width: 800px) {
+  #text{
+   position: relative;
+   right: 125px;
+  }
+}
+
+
+@media (max-width: 800px) {
+  #profile_Edit{
+   position: relative;
+   left: -80px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  #labelEdit{
+   position: relative;
+   left: -75px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  #categoryEdit{
+   position: relative;
+   left: -75px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .detailEditBtn{
+   position: relative;
+   left: -75px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .countries-container{
+  margin-left: 3px !important;
+  }
+}
+
+
+
+
+
 
 
 .profilepic {
@@ -569,6 +695,7 @@ body {
     opacity: 0;
   }
 }
+
 
 .main {
   border-radius: 20px;
