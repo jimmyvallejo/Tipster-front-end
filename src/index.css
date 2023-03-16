@@ -268,7 +268,7 @@ body {
 @media (max-width: 800px) {
   #homeimg {
     position: relative;
-    right: 20px;
+    right: 15px;
     top: 16px;
   }
 }
@@ -310,7 +310,7 @@ body {
 @media (max-width: 800px) {
   #profileimg {
     position: relative;
-    left: 66px;
+    left: 71px;
     height: 27px;
     top:15px;
   }
@@ -358,23 +358,27 @@ body {
   #signupimg {
     position: relative;
     top: 13px;
-    right: 15px;
+    left: 65px;
+    height: 25px;
+    width: 25px;
   }
 }
 
 @media (max-width: 800px) {
   #signuptxt {
     position: relative;
-    right: 12px;
-    top: 4px;
+    left: 65px;
+    top: 6px;
   }
 }
 
 @media (max-width: 800px) {
   #loginimg {
     position: relative;
-    top: 15px !important;
-    left: 20px;
+    top: 14px !important;
+    left: 80px;
+    height: 25px;
+    width: 25px;
   }
 }
 
@@ -400,8 +404,8 @@ body {
 @media (max-width: 800px) {
   #logintxt {
     position: relative;
-    top: 3px;
-    left: 25px;
+    top: 6px;
+    left: 84px;
   }
 }
 
