@@ -268,7 +268,7 @@ body {
 @media (max-width: 800px) {
   #homeimg {
     position: relative;
-    right: 29px;
+    right: 20px;
     top: 16px;
   }
 }
@@ -294,7 +294,7 @@ body {
 @media (max-width: 800px) {
   #premiumimg {
     position: relative;
-    left: 0px;
+    left: 7px;
     top: 16px;
   }
 }
@@ -310,7 +310,7 @@ body {
 @media (max-width: 800px) {
   #profileimg {
     position: relative;
-    left: 45px;
+    left: 66px;
     height: 27px;
     top:15px;
   }
@@ -347,7 +347,7 @@ body {
   .logout {
     position: relative;
     top: 2px;
-    left: 71px;
+    left: 81px;
     font-size: 12px !important;
     width: 70px;
     text-align: center;
@@ -700,7 +700,7 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
-   margin-left: 130px;
+   margin-left: 120px;
   }
 }
 
