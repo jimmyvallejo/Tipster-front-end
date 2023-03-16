@@ -49,7 +49,7 @@ const Comment = ({ comment, setComments}) => {
         <div className="tipExtras"></div>
         {authUser?.username === comment.owner && (
           <div className="commentChange">
-            <Link className="edit delete" onClick={handleDelete}>
+            <Link className="editdelete" onClick={handleDelete}>
               Delete
             </Link>{" "}
           </div>

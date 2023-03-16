@@ -709,6 +709,21 @@ body {
 }
 
 
+  .commentChange {
+     color: black !important;
+     margin-left: 600px !important;
+     margin-top: 30px;
+  }  
+
+  .editdelete {
+    color: black;
+  }
+
+    .editdelete:hover {
+    color: black;
+  }
+
+
 #tipSubmitImg {
   position: relative;
   top: 20px;
