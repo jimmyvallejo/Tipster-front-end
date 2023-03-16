@@ -432,7 +432,7 @@ body {
 @media (max-width: 800px) {
   #commentButton {
     position: static;
-    margin-left: 45px;
+    margin-left: 55px;
     margin-top: 20px;
   }
 }
@@ -440,7 +440,7 @@ body {
 @media (max-width: 800px) {
   .exitComment {
     position: relative !important;
-    left: 170px !important;
+    left: 210px !important;
     margin-bottom: 50px !important;
   }
 }
