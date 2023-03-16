@@ -268,7 +268,7 @@ body {
 @media (max-width: 800px) {
   #homeimg {
     position: relative;
-    right: 12px;
+    right: 29px;
     top: 16px;
   }
 }
@@ -276,7 +276,7 @@ body {
 @media (max-width: 800px) {
   .logo {
     position: relative;
-    right: 37px;
+    right: 55px;
     top: 0px;
     font-size: 0;
   }
@@ -347,7 +347,7 @@ body {
   .logout {
     position: relative;
     top: 2px;
-    left: 41px;
+    left: 71px;
     font-size: 12px !important;
     width: 70px;
     text-align: center;
