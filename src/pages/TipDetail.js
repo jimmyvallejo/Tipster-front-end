@@ -253,21 +253,28 @@ useEffect(() => {
                 onSubmit={handleSubmit}
               >
                 <div>
-                  <label id="locationLabel" for="category">
+                  <label
+                    id="locationLabel"
+                    className="locationEditLabel"
+                    for="category"
+                  >
                     Location:{" "}
                   </label>
                   <input
+                    id="locationEditInput"
                     className="locationInput"
                     type="text"
                     name="location"
                     onChange={handleChange}
                     onBlur={handleLocationBlur}
                     value={editTip.location}
-                    placeholder="Let us Know!"
+                    placeholder="Location/City/State"
                   />
                 </div>
                 <div className="textDetailEdit">
-                  <label className="textEditDetail" htmlFor="username">Text: </label>
+                  <label className="textEditDetail" htmlFor="username">
+                    Text:{" "}
+                  </label>
                   <input
                     type="text"
                     id="text"

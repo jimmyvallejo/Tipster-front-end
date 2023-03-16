@@ -478,7 +478,7 @@ body {
 @media (max-width: 800px) {
   .detailHeart{
    position: relative;
-   left: 10px !important;
+   left: -15px !important;
   }
 }
 
@@ -486,7 +486,7 @@ body {
 @media (max-width: 800px) {
   .detailComment{
    position: relative;
-   right:10px !important;
+   right:35px !important;
   }
 }
 
@@ -507,6 +507,16 @@ body {
    font-size: 0 !important;
   }
 }
+
+@media (max-width: 800px) {
+  #locationEditInput{
+   position: relative !important;
+   right: 85px !important;
+   width: 200px !important;
+   font-size: 17px !important;
+  }
+}
+
 
 @media (max-width: 800px) {
   .tipEdit{
@@ -564,6 +574,12 @@ body {
   }
 }
 
+
+@media (max-width: 800px) {
+  .editDelete{
+  margin-right: 70px !important;
+  }
+}
 
 
 
