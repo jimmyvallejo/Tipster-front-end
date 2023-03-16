@@ -238,7 +238,7 @@ body {
   .addButton {
     position: relative !important;
     top: 85px !important;
-    right: 125px !important;
+    right: 130px !important;
   }
 }
 
@@ -254,7 +254,7 @@ body {
     left: 20px !important;
     top: 1px;
     color: black;
-    width: 200px;
+    width: 205px;
   }
 }
 
@@ -493,7 +493,7 @@ body {
 
 @media (max-width: 800px) {
   .locationInput{
-   width: 255px;
+   width: 265px;
    position: relative;
    right: 0px;
   }
