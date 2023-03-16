@@ -238,7 +238,7 @@ body {
   .addButton {
     position: relative !important;
     top: 85px !important;
-    right: 67px !important;
+    right: 105px !important;
   }
 }
 
@@ -251,9 +251,10 @@ body {
 @media (max-width: 800px) {
   #category {
     position: relative;
-    left: 53px !important;
+    left: 20px !important;
     top: 1px;
     color: black;
+    width: 180px;
   }
 }
 
@@ -492,18 +493,18 @@ body {
 
 @media (max-width: 800px) {
   .locationInput{
-   width: 200px;
+   width: 240px;
    position: relative;
-   right: 85px;
+   right: 0px;
   }
 }
 
 
 @media (max-width: 800px) {
   #locationLabel{
-   width: 200px;
    position: relative;
-   right: 85px;
+   right: 50px;
+   font-size: 0 !important;
   }
 }
 
