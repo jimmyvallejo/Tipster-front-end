@@ -266,7 +266,6 @@ useEffect(() => {
                     type="text"
                     name="location"
                     onChange={handleChange}
-                    onBlur={handleLocationBlur}
                     value={editTip.location}
                     placeholder="Location/City/State"
                   />
