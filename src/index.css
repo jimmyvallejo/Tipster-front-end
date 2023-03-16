@@ -708,13 +708,20 @@ body {
   }
 }
 
+@media (max-width: 600px) {
+  .commentChange{
+   position: relative !important;
+   right: 295px !important;
+  }
+}
+
+
 
   .commentChange {
      color: black !important;
-     margin-left: 600px !important;
-     margin-top: 30px;
-  }  
-
+  position: static;
+  margin-left: 600px;
+  }
   .editdelete {
     color: black;
   }
