@@ -376,7 +376,7 @@ body {
   #loginimg {
     position: relative;
     top: 14px !important;
-    left: 90px;
+    left: 100px;
     height: 25px;
     width: 25px;
   }
@@ -405,7 +405,7 @@ body {
   #logintxt {
     position: relative;
     top: 6px;
-    left: 94px;
+    left: 104px;
   }
 }
 
