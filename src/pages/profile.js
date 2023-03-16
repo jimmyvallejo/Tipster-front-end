@@ -200,15 +200,16 @@ const Profile = ({ setIsBackgroundDimmed, isBackgroundDimmed}) => {
       ) : (
         <div></div>
       )}
-      {authUser.username == user.username ? 
-      <h1>
-        Hello <span>{user.name}</span>
-      </h1>
-      : <h1></h1>
-         }
+      {authUser.username == user.username ? (
+        <h1 className="profileName">
+          Hello <span>{user.name}</span>
+        </h1>
+      ) : (
+        <h1></h1>
+      )}
 
       {user ? (
-        <>
+        <div id="shrinkProfile">
           {user.profile_image ? (
             <img
               className="profileimg"
@@ -230,18 +231,18 @@ const Profile = ({ setIsBackgroundDimmed, isBackgroundDimmed}) => {
               <p></p>
             )}
           </div>
-        </>
+        </div>
       ) : (
         <h4>Loading...</h4>
       )}
       <div className="userTips">
         <h3>User Tips:</h3>
         {userTips ? (
-          <>
+          <div id="userTips">
             {userTips.map((tip) => {
               return <Tip key={tip._id} tip={tip} getTip={getTip} />;
             })}
-          </>
+          </div>
         ) : (
           <h4>Loading...</h4>
         )}

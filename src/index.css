@@ -284,14 +284,14 @@ body {
 @media (max-width: 800px) {
   #premiumimg {
     position: relative;
-    right: 35px;
+    right: 30px;
   }
 }
 
 @media (max-width: 800px) {
   #premiumtext {
     position: relative;
-    right: 55px;
+    right: 50px;
   }
 }
 
@@ -581,17 +581,110 @@ body {
   }
 }
 
-
-
-
-
-
-.profilepic {
-  height: 65px;
-  margin-top: 5px;
-  border-radius: 40px;
-  max-width: 65px;
+@media (max-width: 800px) {
+  .profileEdit{
+  max-width: 70vw !important;
+  width: 70vw !important;
+  }
 }
+
+
+@media (max-width: 800px) {
+  .profile{
+   max-width: 95vw;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+  }
+}
+
+@media (max-width: 800px) {
+  .profile #userTips{
+   max-width: 95vw;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   
+  }
+}
+
+
+@media (max-width: 800px) {
+  #shrinkProfile{
+   max-width: 95vw;
+   margin-left: 180px;
+ 
+  }
+}
+
+
+@media (max-width: 800px) {
+  .profileName{
+  margin-left: 180px;
+  font-size: 22px;
+  }
+}
+
+@media (max-width: 800px) {
+  .settings{
+  margin-left: 280px;
+  }
+}
+
+@media (max-width: 800px) {
+  #profileForm{
+   width: 98vw ;
+  }
+}
+
+@media (max-width: 800px) {
+  #profileForm input{
+   width: 300px;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .profileEdit h2{
+   position: relative;
+   left: 125px !important;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .deleteUser{
+   position: relative;
+   left: 290px !important;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .exitEdit{
+   position: relative;
+   left: -30px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .profileBtn{
+   position: relative;
+   left: 50px !important;
+   width: 200px;
+  }
+}
+
+@media (max-width: 800px) {
+  #userTips{
+   width: 98vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-left: 138px;
+  }
+}
+
 
 #tipSubmitImg {
   position: relative;
@@ -712,6 +805,10 @@ body {
     opacity: 0;
   }
 }
+
+
+
+
 
 
 .main {
