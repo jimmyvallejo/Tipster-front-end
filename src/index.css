@@ -385,7 +385,7 @@ body {
 @media (max-width: 800px) {
   .loginBtn {
     margin-top:25px !important;
-    margin-left: 70px !important;
+    margin-left: 95px !important;
   }
 }
 
@@ -397,7 +397,7 @@ body {
 
 @media (max-width: 800px) {
   #login h1{
-  margin-left: 20px;
+  margin-left: 40px;
   }
 }
 
@@ -432,7 +432,7 @@ body {
 @media (max-width: 800px) {
   #commentButton {
     position: static;
-    margin-left: 55px;
+    margin-left: 65px;
     margin-top: 20px;
   }
 }
@@ -440,7 +440,7 @@ body {
 @media (max-width: 800px) {
   .exitComment {
     position: relative !important;
-    left: 210px !important;
+    left: 230px !important;
     margin-bottom: 50px !important;
   }
 }
