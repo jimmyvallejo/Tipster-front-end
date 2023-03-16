@@ -358,7 +358,7 @@ body {
   #signupimg {
     position: relative;
     top: 13px;
-    left: 65px;
+    left: 75px;
     height: 25px;
     width: 25px;
   }
@@ -367,7 +367,7 @@ body {
 @media (max-width: 800px) {
   #signuptxt {
     position: relative;
-    left: 65px;
+    left: 75px;
     top: 6px;
   }
 }
@@ -376,7 +376,7 @@ body {
   #loginimg {
     position: relative;
     top: 14px !important;
-    left: 80px;
+    left: 90px;
     height: 25px;
     width: 25px;
   }
@@ -405,7 +405,7 @@ body {
   #logintxt {
     position: relative;
     top: 6px;
-    left: 84px;
+    left: 94px;
   }
 }
 
