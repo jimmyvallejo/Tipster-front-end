@@ -1,19 +1,18 @@
 import { useEffect, useState, useContext } from "react";
-import { Link } from "react-router-dom";
 import { LoadingContext } from "../context/loading.context";
 import Tip from "../components/tip";
-import { AuthContext } from "../context/auth.context";
 import Comment from "../components/addComment";
 import AddTip from "../components/addTip";
 
-
-
 const Home = ({ dimBackground, isBackgroundDimmed, setIsBackgroundDimmed }) => {
-  const { tips, getTips, comment, authUser, setAuthUser } =
-    useContext(LoadingContext);
- 
+  const { tips, getTips, comment, authUser } = useContext(LoadingContext);
 
-  const {originalTipsContext, filteredTipsContext, setOriginalTipsContext, setFilteredTipsContext} = useContext(LoadingContext)
+  const {
+    originalTipsContext,
+    filteredTipsContext,
+    setOriginalTipsContext,
+    setFilteredTipsContext,
+  } = useContext(LoadingContext);
 
   useEffect(() => {
     if (!tips) {
@@ -28,31 +27,31 @@ const Home = ({ dimBackground, isBackgroundDimmed, setIsBackgroundDimmed }) => {
     }
   }, [tips, comment]);
 
-
-
-  
   const [query, setQuery] = useState("");
 
   const filterTipList = (category) => {
     if (category === "All") {
       setFilteredTipsContext(originalTipsContext);
-      
     } else {
-      const filtered = originalTipsContext.filter((tip) => tip.category === category);
+      const filtered = originalTipsContext.filter(
+        (tip) => tip.category === category
+      );
       setFilteredTipsContext(filtered);
     }
   };
 
+  const searchTipList = filteredTipsContext
+    ? filteredTipsContext.filter((tip) => {
+        const searchText = tip.text.toLowerCase();
+        const searchCategory = tip.category.toLowerCase();
+        const searchQuery = query.toLowerCase();
 
-
-  const searchTipList = filteredTipsContext ? filteredTipsContext.filter((tip) => {
-    const searchText = tip.text.toLowerCase();
-    const searchCategory = tip.category.toLowerCase();
-    const searchQuery = query.toLowerCase();
-  
-    return searchText.includes(searchQuery) ||
-           searchCategory.includes(searchQuery) 
-  }) : [];
+        return (
+          searchText.includes(searchQuery) ||
+          searchCategory.includes(searchQuery)
+        );
+      })
+    : [];
 
   return (
     <div>
@@ -81,7 +80,14 @@ const Home = ({ dimBackground, isBackgroundDimmed, setIsBackgroundDimmed }) => {
       <h2 id="homeh2">Home</h2>
       {authUser && <AddTip />}
       <div className="mainButtons">
-        <button className="mainbutton" onClick={() => {filterTipList("Food")}}>Dining</button>
+        <button
+          className="mainbutton"
+          onClick={() => {
+            filterTipList("Food");
+          }}
+        >
+          Dining
+        </button>
         <button onClick={() => filterTipList("Traffic")}>Traffic</button>
         <button onClick={() => filterTipList("Entertainment")}>
           Entertainment
@@ -94,7 +100,13 @@ const Home = ({ dimBackground, isBackgroundDimmed, setIsBackgroundDimmed }) => {
           <>
             {searchTipList.map((tip) => {
               return (
-                <Tip key={tip._id} tip={tip} dimBackground={dimBackground} setFilteredTips={setFilteredTipsContext} setOriginalTips={setOriginalTipsContext} />
+                <Tip
+                  key={tip._id}
+                  tip={tip}
+                  dimBackground={dimBackground}
+                  setFilteredTips={setFilteredTipsContext}
+                  setOriginalTips={setOriginalTipsContext}
+                />
               );
             })}
           </>

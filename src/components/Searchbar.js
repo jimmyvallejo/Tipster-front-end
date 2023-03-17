@@ -1,4 +1,4 @@
-const SearchBar = ({setSearchTerm, searchTerm}) => {
+const SearchBar = ({ setSearchTerm }) => {
   return (
     <div className="SearchBar">
       <input

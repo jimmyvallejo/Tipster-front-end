@@ -4,22 +4,18 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { get } from "../services/authService";
 import Comment from "../components/Comments";
-import { AuthContext } from "../context/auth.context";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { LoadingContext } from "../context/loading.context";
 import { Link } from "react-router-dom";
 import { post } from "../services/authService";
-import { GoogleMap, useLoadScript, } from "@react-google-maps/api";
+import { GoogleMap, useLoadScript } from "@react-google-maps/api";
 import { Marker } from "@react-google-maps/api";
 
-
 const TipDetail = () => {
-  
+  const navigate = useNavigate();
 
-   const navigate = useNavigate();
-
-   const { id } = useParams();
+  const { id } = useParams();
 
   const { authUser, setTips, getTips } = useContext(LoadingContext);
 
@@ -32,65 +28,55 @@ const TipDetail = () => {
   const [tip, setTip] = useState({});
   const [comments, setComments] = useState([]);
 
-      const createdAt = tip.createdAt;
-      const createdDate = new Date(createdAt);
-      const currentDate = new Date();
-      const timeDiff = currentDate.getTime() - createdDate.getTime();
-      const hoursAgo = Math.round(timeDiff / 3600000);
+  const createdAt = tip.createdAt;
+  const createdDate = new Date(createdAt);
+  const currentDate = new Date();
+  const timeDiff = currentDate.getTime() - createdDate.getTime();
+  const hoursAgo = Math.round(timeDiff / 3600000);
 
-  
-const [newLike, setNewLike] = useState({
-  userId: authUser?._id,
-  tipId: id
-});
+  const [newLike] = useState({
+    userId: authUser?._id,
+    tipId: id,
+  });
   const [edit, setEdit] = useState(null);
-
-
 
   useEffect(() => {
     getTip(id);
   }, []);
 
-  
-
-
-
-  
-
-useEffect(() => {
-  if (tip.location) {
-   geocodeAddress(tip.location);
-  }
-}, [tip]);
-
-    async function geocodeAddress(address) {
-      const response = await axios.get(
-        "https://maps.googleapis.com/maps/api/geocode/json",
-        {
-          params: {
-            address: String(address),
-            key: process.env.REACT_APP_NEXT_GOOGLE_MAPS_KEY,
-          },
-        }
-      );
-      
-      setLat(response.data.results[0].geometry.location.lat)
-      setLong(response.data.results[0].geometry.location.lng);
-      
+  useEffect(() => {
+    if (tip.location) {
+      geocodeAddress(tip.location);
     }
+  }, [tip]);
 
-      const getTip = () => {
-        axios
-          .get(`${baseUrl}/tips/tip-detail/${id}`)
-          .then((response) => {
-            setTip(response.data);
-            setComments(response.data.comments);
-            console.log("Tip:", response.data);
-          })
-          .catch((err) => {
-            console.log(err);
-          });
-      };
+  async function geocodeAddress(address) {
+    const response = await axios.get(
+      "https://maps.googleapis.com/maps/api/geocode/json",
+      {
+        params: {
+          address: String(address),
+          key: process.env.REACT_APP_NEXT_GOOGLE_MAPS_KEY,
+        },
+      }
+    );
+
+    setLat(response.data.results[0].geometry.location.lat);
+    setLong(response.data.results[0].geometry.location.lng);
+  }
+
+  const getTip = () => {
+    axios
+      .get(`${baseUrl}/tips/tip-detail/${id}`)
+      .then((response) => {
+        setTip(response.data);
+        setComments(response.data.comments);
+        console.log("Tip:", response.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   const handleDelete = () => {
     get(`/tips/tip/delete/${id}`)
@@ -108,7 +94,7 @@ useEffect(() => {
     text: "",
     category: "",
     picture: "",
-    location: ""
+    location: "",
   });
 
   const handleChange = (e) => {
@@ -147,12 +133,12 @@ useEffect(() => {
     setEdit((edit) => !edit);
   };
 
-  const handleLocationBlur = (e) => {
-    const { name, value } = e.target;
-    const formattedValue = `${value} USA`;
-    setEditTip((prev) => ({ ...prev, [name]: formattedValue }));
-    console.log(setTip);
-  };
+  // const handleLocationBlur = (e) => {
+  //   const { name, value } = e.target;
+  //   const formattedValue = `${value} USA`;
+  //   setEditTip((prev) => ({ ...prev, [name]: formattedValue }));
+  //   console.log(setTip);
+  // };
 
   const addLike = () => {
     axios.post(`${baseUrl}/tips/add-like`, newLike).then((results) => {

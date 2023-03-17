@@ -17,7 +17,7 @@ body {
 .dimmed {
   background-color: rgba(128, 128, 128, 0.65);
   pointer-events: none;
-  margin-right: 0;
+  margin-left: 0;
   padding: 0;
   margin-top: -100px;
 }
@@ -28,7 +28,7 @@ body {
 
 .dimmed .SearchBar input {
   background-color: rgba(146, 144, 144, 0.65);
-  border-color:rgba(146, 144, 144, 0.65);
+  border-color: rgba(146, 144, 144, 0.65);
 }
 
 .dimmed .mainButtons input {
@@ -215,14 +215,12 @@ body {
 @media (max-width: 800px) {
   .tipContainer {
     width: 98vw !important;
-    
   }
 }
 
 @media (max-width: 800px) {
   .tipbox {
     width: 98vw !important;
-   
   }
 }
 
@@ -282,7 +280,6 @@ body {
   }
 }
 
-
 @media (max-width: 800px) {
   #home {
     position: relative;
@@ -312,7 +309,7 @@ body {
     position: relative;
     left: 71px;
     height: 27px;
-    top:15px;
+    top: 15px;
   }
 }
 
@@ -384,20 +381,20 @@ body {
 
 @media (max-width: 800px) {
   .loginBtn {
-    margin-top:25px !important;
+    margin-top: 25px !important;
     margin-left: 88px !important;
   }
 }
 
 @media (max-width: 800px) {
   #login {
-  margin-top: 50px !important;
+    margin-top: 50px !important;
   }
 }
 
 @media (max-width: 800px) {
-  #login h1{
-  margin-left: 40px;
+  #login h1 {
+    margin-left: 40px;
   }
 }
 
@@ -448,13 +445,11 @@ body {
 @media (max-width: 800px) {
   .mainButtons button {
     margin-top: 65px;
-   
+
     text-decoration: none;
     color: black;
   }
 }
-
-
 
 @media (max-width: 800px) {
   #tipSubmitImg {
@@ -472,264 +467,244 @@ body {
   }
 }
 
-
-
 @media (max-width: 800px) {
-  .whoIsPosting{
-   margin-left: 25px;
+  .whoIsPosting {
+    margin-left: 25px;
   }
 }
 
 @media (max-width: 800px) {
-  .addPic{
-   color: black;
+  .addPic {
+    color: black;
   }
 }
 
 @media (max-width: 800px) {
-  .commentImgBox{
-   margin-bottom: 60px !important;
+  .commentImgBox {
+    margin-bottom: 60px !important;
   }
 }
 
 @media (max-width: 800px) {
-  .signup{
-   margin-top: 50px !important;
+  .signup {
+    margin-top: 50px !important;
   }
 }
 
 @media (max-width: 800px) {
-  .detailHeart{
-   position: relative;
-   left: -15px !important;
-  }
-}
-
-
-@media (max-width: 800px) {
-  .detailComment{
-   position: relative;
-   right:35px !important;
-  }
-}
-
-
-@media (max-width: 800px) {
-  .locationInput{
-   width: 265px;
-   position: relative;
-   right: 0px;
-  }
-}
-
-
-@media (max-width: 800px) {
-  #locationLabel{
-   position: relative;
-   right: 50px;
-   font-size: 0 !important;
+  .detailHeart {
+    position: relative;
+    left: -15px !important;
   }
 }
 
 @media (max-width: 800px) {
-  #locationEditInput{
-   position: relative !important;
-   right: 85px !important;
-   width: 200px !important;
-   font-size: 17px !important;
-  }
-}
-
-
-@media (max-width: 800px) {
-  .tipEdit{
-   min-height: 500px !important;
+  .detailComment {
+    position: relative;
+    right: 35px !important;
   }
 }
 
 @media (max-width: 800px) {
-  .textEditDetail{
-   position: relative;
-   right: 125px !important;
-  }
-}
-
-
-@media (max-width: 800px) {
-  #text{
-   position: relative;
-   right: 125px;
-  }
-}
-
-
-@media (max-width: 800px) {
-  #profile_Edit{
-   position: relative;
-   left: -80px !important;
+  .locationInput {
+    width: 265px;
+    position: relative;
+    right: 0px;
   }
 }
 
 @media (max-width: 800px) {
-  #labelEdit{
-   position: relative;
-   left: -75px !important;
+  #locationLabel {
+    position: relative;
+    right: 50px;
+    font-size: 0 !important;
   }
 }
 
 @media (max-width: 800px) {
-  #categoryEdit{
-   position: relative;
-   left: -75px !important;
+  #locationEditInput {
+    position: relative !important;
+    right: 85px !important;
+    width: 200px !important;
+    font-size: 17px !important;
   }
 }
 
 @media (max-width: 800px) {
-  .detailEditBtn{
-   position: relative;
-   left: -75px !important;
+  .tipEdit {
+    min-height: 500px !important;
   }
 }
 
 @media (max-width: 800px) {
-  .countries-container{
-  margin-left: 3px !important;
-  }
-}
-
-
-@media (max-width: 800px) {
-  .editDelete{
-  margin-right: 70px !important;
+  .textEditDetail {
+    position: relative;
+    right: 125px !important;
   }
 }
 
 @media (max-width: 800px) {
-  .profileEdit{
-  max-width: 70vw !important;
-  width: 70vw !important;
-  }
-}
-
-
-@media (max-width: 800px) {
-  .profile{
-   max-width: 95vw;
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
+  #text {
+    position: relative;
+    right: 125px;
   }
 }
 
 @media (max-width: 800px) {
-  .profile #userTips{
-   max-width: 95vw;
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
-   
-  }
-}
-
-
-@media (max-width: 800px) {
-  #shrinkProfile{
-   max-width: 95vw;
-   margin-left: 140px;
- 
-  }
-}
-
-
-@media (max-width: 800px) {
-  .profileName{
-  margin-left: 150px;
-  font-size: 22px;
+  #profile_Edit {
+    position: relative;
+    left: -80px !important;
   }
 }
 
 @media (max-width: 800px) {
-  .settings{
-  margin-left: 280px;
+  #labelEdit {
+    position: relative;
+    left: -75px !important;
   }
 }
 
 @media (max-width: 800px) {
-  #profileForm{
-   width: 98vw ;
+  #categoryEdit {
+    position: relative;
+    left: -75px !important;
   }
 }
 
 @media (max-width: 800px) {
-  #profileForm input{
-   width: 300px;
-  }
-}
-
-
-@media (max-width: 800px) {
-  .profileEdit h2{
-   position: relative;
-   left: 125px !important;
-  }
-}
-
-
-@media (max-width: 800px) {
-  .deleteUser{
-   position: relative;
-   left: 290px !important;
-  }
-}
-
-
-@media (max-width: 800px) {
-  .exitEdit{
-   position: relative;
-   left: -30px !important;
+  .detailEditBtn {
+    position: relative;
+    left: -75px !important;
   }
 }
 
 @media (max-width: 800px) {
-  .profileBtn{
-   position: relative;
-   left: 50px !important;
-   width: 200px;
+  .countries-container {
+    margin-left: 3px !important;
   }
 }
 
 @media (max-width: 800px) {
-  #userTips{
-   width: 98vw;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   margin-left: 110px;
+  .editDelete {
+    margin-right: 70px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .profileEdit {
+    max-width: 70vw !important;
+    width: 70vw !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .profile {
+    max-width: 95vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 800px) {
+  .profile #userTips {
+    max-width: 95vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 800px) {
+  #shrinkProfile {
+    max-width: 95vw;
+    margin-left: 140px;
+  }
+}
+
+@media (max-width: 800px) {
+  .profileName {
+    margin-left: 150px;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 800px) {
+  .settings {
+    margin-left: 280px;
+  }
+}
+
+@media (max-width: 800px) {
+  #profileForm {
+    width: 98vw;
+  }
+}
+
+@media (max-width: 800px) {
+  #profileForm input {
+    width: 300px;
+  }
+}
+
+@media (max-width: 800px) {
+  .profileEdit h2 {
+    position: relative;
+    left: 125px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .deleteUser {
+    position: relative;
+    left: 290px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .exitEdit {
+    position: relative;
+    left: -30px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .profileBtn {
+    position: relative;
+    left: 50px !important;
+    width: 200px;
+  }
+}
+
+@media (max-width: 800px) {
+  #userTips {
+    width: 98vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 110px;
   }
 }
 
 @media (max-width: 600px) {
-  .commentChange{
-   position: relative !important;
-   right: 295px !important;
+  .commentChange {
+    position: relative !important;
+    right: 295px !important;
   }
 }
 
-
-
-  .commentChange {
-     color: black !important;
+.commentChange {
+  color: black !important;
   position: static;
   margin-left: 600px;
-  }
-  .editdelete {
-    color: black;
-  }
+}
+.editdelete {
+  color: black;
+}
 
-    .editdelete:hover {
-    color: black;
-  }
-
+.editdelete:hover {
+  color: black;
+}
 
 #tipSubmitImg {
   position: relative;
@@ -850,11 +825,6 @@ body {
     opacity: 0;
   }
 }
-
-
-
-
-
 
 .main {
   border-radius: 20px;

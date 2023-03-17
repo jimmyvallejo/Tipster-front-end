@@ -1,43 +1,41 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { LoadingContext } from '../context/loading.context';
-import { useContext } from 'react';
-import { get } from '../services/authService';
+import React from "react";
+import { Link } from "react-router-dom";
+import { LoadingContext } from "../context/loading.context";
+import { useContext } from "react";
+import { get } from "../services/authService";
 
-const Comment = ({ comment, setComments}) => {
-    
-    
-    const { authUser } = useContext(LoadingContext);
-    
-    const createdAt = comment.createdAt;
-    const createdDate = new Date(createdAt);
-    const currentDate = new Date();
-    const timeDiff = currentDate.getTime() - createdDate.getTime();
-    const hoursAgo = Math.round(timeDiff / 3600000);
-  
+const Comment = ({ comment, setComments }) => {
+  const { authUser } = useContext(LoadingContext);
 
+  const createdAt = comment.createdAt;
+  const createdDate = new Date(createdAt);
+  const currentDate = new Date();
+  const timeDiff = currentDate.getTime() - createdDate.getTime();
+  const hoursAgo = Math.round(timeDiff / 3600000);
 
-    const handleDelete = () => {
-        get(`/tips/comment/delete/${comment._id}`)
-          .then(() => {
-            console.log("Comment deleted");
-            // Remove the deleted comment from the state
-            setComments(prevComments => prevComments.filter(c => c._id !== comment._id));
-          })
-          .catch((err) => {
-            console.log(err);
-          });
-      };
+  const handleDelete = () => {
+    get(`/tips/comment/delete/${comment._id}`)
+      .then(() => {
+        console.log("Comment deleted");
+        // Remove the deleted comment from the state
+        setComments((prevComments) =>
+          prevComments.filter((c) => c._id !== comment._id)
+        );
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
-
-  
-
-  
   return (
     <div className="tipContainer">
       <div className="tipbox commentBox" key={comment._id}>
         <div className="commentimgbox">
-          <img className="profilepic" src={comment.ownerpicture}></img>
+          <img
+            className="profilepic"
+            alt="comment owner"
+            src={comment.ownerpicture}
+          ></img>
         </div>
         <div className="tipImgName">
           <p className="tipOwner">{comment.owner}</p>

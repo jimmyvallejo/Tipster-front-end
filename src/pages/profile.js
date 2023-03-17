@@ -1,6 +1,6 @@
 import { LoadingContext } from "../context/loading.context";
 import { useContext, useEffect, useState } from "react";
-import { Form, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 import { baseUrl } from "../services/baseUrl";
 import Tip from "../components/tip";
@@ -8,9 +8,7 @@ import { Link } from "react-router-dom";
 import { post, get } from "../services/authService";
 import { AuthContext } from "../context/auth.context";
 
-import Comment from "../components/Comments";
-
-const Profile = ({ setIsBackgroundDimmed, isBackgroundDimmed}) => {
+const Profile = ({ setIsBackgroundDimmed, isBackgroundDimmed }) => {
   const { id } = useParams();
 
   const [user, setUser] = useState("");
@@ -18,7 +16,7 @@ const Profile = ({ setIsBackgroundDimmed, isBackgroundDimmed}) => {
 
   const [error, setError] = useState(null);
 
- const { comment, authUser, getTips}  = useContext(LoadingContext)
+  const { authUser, getTips } = useContext(LoadingContext);
 
   const getUser = () => {
     axios
@@ -73,7 +71,7 @@ const Profile = ({ setIsBackgroundDimmed, isBackgroundDimmed}) => {
     email: "",
     username: "",
     profile_image: "",
-    previous_image: user.profile_image
+    previous_image: user.profile_image,
   });
 
   const handleChange = (e) => {
@@ -89,7 +87,7 @@ const Profile = ({ setIsBackgroundDimmed, isBackgroundDimmed}) => {
         console.log("Edited User", results.data);
         setIsBackgroundDimmed(false);
         changeLogout();
-        getTips()
+        getTips();
       })
       .catch((err) => {
         console.log(err);
@@ -97,18 +95,17 @@ const Profile = ({ setIsBackgroundDimmed, isBackgroundDimmed}) => {
       });
   };
 
-
   const handleFileSubmit = (e) => {
-     let fileUpload = new FormData()
-     fileUpload.append("profile_image", e.target.files[0])
-     post('/users/add-picture', fileUpload)
-     .then((result) =>{
-      setEditUser((recent) => ({ ...recent, profile_image: result.data }));
-     })
-     .catch((err) => {
-      console.log(err)
-     })
-  }
+    let fileUpload = new FormData();
+    fileUpload.append("profile_image", e.target.files[0]);
+    post("/users/add-picture", fileUpload)
+      .then((result) => {
+        setEditUser((recent) => ({ ...recent, profile_image: result.data }));
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   const handleDelete = () => {
     get(`/users/profile/delete/${id}`)
@@ -122,8 +119,6 @@ const Profile = ({ setIsBackgroundDimmed, isBackgroundDimmed}) => {
         console.log(err);
       });
   };
-
-
 
   return (
     <div className="profile">
