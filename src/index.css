@@ -496,7 +496,8 @@ display: flex;
   justify-content: space-around;
     text-decoration: none;
     color: black;
-    margin-top: 120px
+    margin-top: 120px;
+    
   }
 }
 
@@ -507,6 +508,7 @@ display: flex;
      color: black;
      border: none;
      font-size: 16px;
+     background-color: white;
   }
 }
 
@@ -765,6 +767,10 @@ display: flex;
 @media (max-width: 600px) {
   .tipForm {
    margin-top: 230px;
+   padding-top: 20px;
+   margin-left: 20px !important;
+
+   
    
   }
 }
