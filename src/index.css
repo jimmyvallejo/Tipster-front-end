@@ -68,6 +68,24 @@ body {
   background-color: rgba(167, 165, 165, 0.65);
 }
 
+.dimmed .weather{
+opacity: 0;
+}
+
+.dimmed .addPic{
+opacity: 0;
+}
+
+.dimmed .addButton{
+color: black;
+background-color: rgba(167, 165, 165, 0.65) !important;
+}
+
+.dimmed .smallMainButtons button{
+color: black;
+background-color: rgba(167, 165, 165, 0.65) !important;
+}
+
 #profileimg {
   position: relative;
   top: 10px;
@@ -103,6 +121,11 @@ body {
   right: 8px;
 }
 
+#logintxt {
+  position: relative;
+  left: 7px;
+}
+
 .logo {
   position: relative;
   right: 5px;
@@ -119,6 +142,7 @@ body {
 #loginimg {
   position: relative;
   top: 18px;
+  right: 4px;
 }
 
 .nav button {
@@ -237,6 +261,8 @@ body {
     position: relative !important;
     top: 85px !important;
     right: 130px !important;
+    background-color: #01579b !important;
+    border-radius: 10px !important;
   }
 }
 
@@ -355,7 +381,7 @@ body {
   #signupimg {
     position: relative;
     top: 13px;
-    left: 75px;
+    left: 80px;
     height: 25px;
     width: 25px;
   }
@@ -364,7 +390,7 @@ body {
 @media (max-width: 800px) {
   #signuptxt {
     position: relative;
-    left: 75px;
+    left: 80px !important;
     top: 6px;
   }
 }
@@ -422,7 +448,8 @@ body {
   .commentbox {
     width: 95vw !important;
     margin-left: 10px;
-    margin-top: 100px !important;
+    position: relative;
+    top: 100px;
   }
 }
 
@@ -431,6 +458,8 @@ body {
     position: static;
     margin-left: 65px;
     margin-top: 20px;
+    border-radius: 10px;
+    background-color: #01579b;
   }
 }
 
@@ -444,12 +473,44 @@ body {
 
 @media (max-width: 800px) {
   .mainButtons button {
-    margin-top: 65px;
+    
 
     text-decoration: none;
     color: black;
   }
 }
+
+@media (max-width: 800px) {
+  .mainButtons  {
+    margin-top: 250px !important;
+
+    text-decoration: none;
+    color: black;
+  }
+}
+
+@media (max-width: 800px) {
+  .smallMainButtons {
+  border: none;
+display: flex;
+  justify-content: space-around;
+    text-decoration: none;
+    color: black;
+    margin-top: 120px
+  }
+}
+
+@media (max-width: 800px) {
+  .smallMainButtons button{
+     
+     text-decoration: none;
+     color: black;
+     border: none;
+     font-size: 16px;
+  }
+}
+
+
 
 @media (max-width: 800px) {
   #tipSubmitImg {
@@ -462,14 +523,14 @@ body {
 
 @media (max-width: 800px) {
   #homeh2 {
-    padding-bottom: 35px !important;
+    padding-bottom: 70px !important;
     margin-left: 15px !important;
   }
 }
 
 @media (max-width: 800px) {
   .whoIsPosting {
-    margin-left: 25px;
+    margin-left: 15px;
   }
 }
 
@@ -524,8 +585,8 @@ body {
 @media (max-width: 800px) {
   #locationEditInput {
     position: relative !important;
-    right: 85px !important;
-    width: 200px !important;
+    right: 70px !important;
+    width: 230px !important;
     font-size: 17px !important;
   }
 }
@@ -539,21 +600,29 @@ body {
 @media (max-width: 800px) {
   .textEditDetail {
     position: relative;
-    right: 125px !important;
+    right: 110px !important;
   }
 }
 
 @media (max-width: 800px) {
   #text {
     position: relative;
-    right: 125px;
+    right: 115px;
+    width: 230px !important;
   }
 }
 
 @media (max-width: 800px) {
   #profile_Edit {
     position: relative;
-    left: -80px !important;
+    left: -60px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  #selectEdit{
+    position: relative;
+    left: 20px !important;
   }
 }
 
@@ -574,7 +643,7 @@ body {
 @media (max-width: 800px) {
   .detailEditBtn {
     position: relative;
-    left: -75px !important;
+    left: -65px !important;
   }
 }
 
@@ -693,6 +762,34 @@ body {
   }
 }
 
+@media (max-width: 600px) {
+  .tipForm {
+   margin-top: 230px;
+   
+  }
+}
+
+
+
+
+  .addButton {
+    background-color: #01579b !important;
+    border-radius: 10px !important;
+  }
+
+   .addButton:hover {
+    background-color: #424242 !important;
+    
+  }
+
+
+.tipForm .tipImgBox {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  right: 10px;
+}
+
 .commentChange {
   color: black !important;
   position: static;
@@ -784,46 +881,30 @@ body {
     left: 78%;
   }
 
-  .main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    background-color: white;
-  }
-
-  .flex {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50px;
-  }
-
-  .temp {
-    margin-top: 10px;
-  }
-
-  .sunrise-sunset {
-    margin-top: 10px;
-  }
-
-  .day {
-    font-size: 16;
-  }
-
-  .top {
-  }
-  .header {
-    width: 100%;
-  }
 }
 
 @media screen and (max-width: 1350px) {
   .weather {
     background-color: white;
     left: 78%;
-    opacity: 0;
+   
   }
+}
+
+@media screen and (max-width: 800px) {
+  .weather {
+    background-color: white;
+    left: 0px !important;
+    height: 200px !important;
+    position: absolute;
+    top: 240px;
+    width: 100vw !important;
+  }
+  .main {
+    height: 200px;
+    width: 98vw !important;
+  }
+  .sunrise-sunset {}
 }
 
 .main {
@@ -1083,7 +1164,7 @@ footer a:hover {
 .mainButtons {
   display: flex;
   justify-content: space-around;
-  margin-top: 70px;
+  margin-top: 150px;
   padding-bottom: 10px;
   margin-right: 20px;
 }
@@ -1159,7 +1240,6 @@ footer a:hover {
 .tipForm {
   display: flex;
   justify-content: space-around;
-
   height: 200px;
 }
 
@@ -1528,6 +1608,7 @@ footer a:hover {
   text-align: center;
   font-size: 40px;
   padding-bottom: 15px;
+  margin-left: 15px;
 }
 
 #login label {
@@ -1564,12 +1645,22 @@ footer a:hover {
   height: 50px;
 }
 
+
+  #signuptxt {
+    position: relative;
+  left: 4px;
+  }
+
+
+
 .loginBtn {
   background-color: white;
+  
 }
 
 .signupBtn {
   background-color: white;
+  margin-right: 15px;
 }
 
 .commentBox {

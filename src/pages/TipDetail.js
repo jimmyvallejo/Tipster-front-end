@@ -278,7 +278,7 @@ const TipDetail = () => {
                   />
                 </div>
                 <div></div>
-                <div>
+                <div id="selectEdit">
                   <label id="labelEdit" for="category">
                     Category:{" "}
                   </label>

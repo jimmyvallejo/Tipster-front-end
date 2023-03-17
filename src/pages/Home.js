@@ -3,6 +3,7 @@ import { LoadingContext } from "../context/loading.context";
 import Tip from "../components/tip";
 import Comment from "../components/addComment";
 import AddTip from "../components/addTip";
+import WeatherApp from "../components/WeatherWidget";
 
 const Home = ({ dimBackground, isBackgroundDimmed, setIsBackgroundDimmed }) => {
   const { tips, getTips, comment, authUser } = useContext(LoadingContext);
@@ -78,8 +79,15 @@ const Home = ({ dimBackground, isBackgroundDimmed, setIsBackgroundDimmed }) => {
       )}
 
       <h2 id="homeh2">Home</h2>
+      {window.innerWidth < 800 && <WeatherApp />}
       {authUser && <AddTip />}
-      <div className="mainButtons">
+      <div
+        className={
+          authUser && window.innerWidth < 800
+            ? "smallMainButtons"
+            : "mainButtons"
+        }
+      >
         <button
           className="mainbutton"
           onClick={() => {

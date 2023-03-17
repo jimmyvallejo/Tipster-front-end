@@ -45,7 +45,7 @@ setIsBackgroundDimmed(true)
  
   return (
     <div className={`app ${isBackgroundDimmed ? "dimmed" : ""}`}>
-      <WeatherApp />
+      {window.innerWidth > 800 && <WeatherApp />}
       <Navbar className="nav" handleDimNav={handleDimNav}/>
       
     

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Card, Loader } from "semantic-ui-react";
+import { Loader } from "semantic-ui-react";
 import moment from "moment";
 
 export default function WeatherApp() {
@@ -49,14 +49,16 @@ export default function WeatherApp() {
               <p className="temp">Humidity: {data.main.humidity} %</p>
             </div>
             <div className="flex">
-              <p className="sunrise-sunset">
+              {window.innerWidth > 800 && <p className="sunrise-sunset">
                 Sunrise:{" "}
                 {new Date(data.sys.sunrise * 1000).toLocaleTimeString("en-IN")}
-              </p>
-              <p className="sunrise-sunset">
+              </p> }
+              
+              {window.innerWidth > 800 && <p className="sunrise-sunset">
                 Sunset:{" "}
                 {new Date(data.sys.sunset * 1000).toLocaleTimeString("en-IN")}
               </p>
+                 }
             </div>
           </div>
         </div>
