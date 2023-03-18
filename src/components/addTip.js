@@ -96,7 +96,7 @@ const AddTip = () => {
           placeholder="Enter tip here!"
           required
         />
-
+       
         <label id="label" for="category">
           Category:{" "}
         </label>

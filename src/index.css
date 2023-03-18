@@ -240,9 +240,11 @@ background-color: rgba(167, 165, 165, 0.65) !important;
 
 @media (max-width: 800px) {
   .tipbox {
-    width: 96vw !important;
+    width: 97vw !important;
   }
 }
+
+
 
 @media (max-width: 800px) {
   .app {
