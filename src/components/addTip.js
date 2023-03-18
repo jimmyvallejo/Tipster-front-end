@@ -93,7 +93,7 @@ const AddTip = () => {
           name="text"
           onChange={handleChange}
           value={newTip.text}
-          placeholder="Sharing is caring!"
+          placeholder="Enter tip here!"
           required
         />
 

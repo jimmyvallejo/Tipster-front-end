@@ -239,6 +239,9 @@ background-color: rgba(167, 165, 165, 0.65) !important;
 @media (max-width: 800px) {
   .tipContainer {
     width: 98vw !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
   }
 }
 
@@ -317,7 +320,7 @@ background-color: rgba(167, 165, 165, 0.65) !important;
 @media (max-width: 800px) {
   #premiumimg {
     position: relative;
-    left: 7px;
+    left: 9px;
     top: 16px;
   }
 }
@@ -570,7 +573,7 @@ display: flex;
 
 @media (max-width: 800px) {
   .locationInput {
-    width: 265px;
+    width: 62vw;
     position: relative;
     right: 0px;
   }
@@ -651,7 +654,10 @@ display: flex;
 
 @media (max-width: 800px) {
   .countries-container {
-    margin-left: 3px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -1614,7 +1620,7 @@ footer a:hover {
   text-align: center;
   font-size: 40px;
   padding-bottom: 15px;
-  margin-left: 15px;
+  margin-left: 30px;
 }
 
 #login label {
@@ -1632,8 +1638,8 @@ footer a:hover {
   font-size: 20px;
   cursor: pointer;
   border: none;
-  margin-left: 110px;
-  margin-top: 50px;
+  margin-left: 115px;
+  margin-top: 40px;
 }
 
 .passwordInput {
