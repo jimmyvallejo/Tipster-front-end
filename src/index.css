@@ -238,7 +238,7 @@ background-color: rgba(167, 165, 165, 0.65) !important;
 
 @media (max-width: 800px) {
   .tipContainer {
-    width: 98vw !important;
+    width: 100vw !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
@@ -775,11 +775,17 @@ display: flex;
    margin-top: 230px;
    padding-top: 20px;
    margin-left: 20px !important;
-
-   
-   
   }
 }
+
+@media (max-width: 800px) {
+  .home{
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-width: 100vw !important;
+  }
+}
+
 
 
 

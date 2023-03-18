@@ -55,7 +55,7 @@ const Home = ({ dimBackground, isBackgroundDimmed, setIsBackgroundDimmed }) => {
     : [];
 
   return (
-    <div>
+    <div className="home">
       <div className="SearchBar">
         <input
           type="text"
