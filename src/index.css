@@ -236,18 +236,11 @@ background-color: rgba(167, 165, 165, 0.65) !important;
   }
 }
 
-@media (max-width: 800px) {
-  .tipContainer {
-    width: 100vw !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-}
+
 
 @media (max-width: 800px) {
   .tipbox {
-    width: 98vw !important;
+    width: 96vw !important;
   }
 }
 
