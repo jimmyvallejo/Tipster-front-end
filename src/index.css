@@ -259,6 +259,8 @@ background-color: rgba(167, 165, 165, 0.65) !important;
   }
 }
 
+
+
 @media (max-width: 800px) {
   .addButton {
     position: relative !important;
@@ -658,6 +660,7 @@ display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-right: 3px;
   }
 }
 
