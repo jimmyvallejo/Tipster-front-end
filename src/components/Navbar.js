@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import { LoadingContext } from "../context/loading.context";
 import { AuthContext } from "../context/auth.context";
 import { loadStripe } from "@stripe/stripe-js";
@@ -15,7 +15,7 @@ const Navbar = () => {
     return stripePromise;
   };
 
-  async function handleCheckout() {
+  const handleCheckout = async () => {
     const stripe = await getStripe();
     const { error } = await stripe.redirectToCheckout({
       lineItems: [
@@ -32,7 +32,7 @@ const Navbar = () => {
     if (error) {
       console.warn(error.message);
     }
-  }
+  };
 
   const getToken = () => {
     return localStorage.getItem("authToken");

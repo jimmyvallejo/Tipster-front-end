@@ -7,7 +7,7 @@ const AddTip = () => {
 
   const { getTips } = useContext(LoadingContext);
 
-  const [newTip, newSetTip, setTip] = useState({
+  const [newTip, newSetTip] = useState({
     owner: authUser.username,
     text: "",
     category: "Food",
@@ -32,8 +32,6 @@ const AddTip = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     newSetTip((prev) => ({ ...prev, [name]: value }));
-    console.log("Changing Tip", newTip);
-    console.log(authUser);
   };
 
   const handleLocation = (e) => {
@@ -41,19 +39,11 @@ const AddTip = () => {
     newSetTip((prev) => ({ ...prev, [name]: value }));
   };
 
-  //  const handleLocationBlur = (e) => {
-  //    const { name, value } = e.target;
-  //    const formattedValue = `${value} USA`;
-  //    newSetTip((prev) => ({ ...prev, [name]: formattedValue }));
-  //    console.log(setTip)
-  //  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
     post("/tips/add-tip", newTip)
       .then((results) => {
-        console.log("Tip", results.data);
         getTips();
         newSetTip({
           ...newTip,
@@ -96,7 +86,7 @@ const AddTip = () => {
           placeholder="Enter tip here!"
           required
         />
-       
+
         <label id="label" for="category">
           Category:{" "}
         </label>

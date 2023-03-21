@@ -6,7 +6,6 @@ import { AuthContext } from "../context/auth.context";
 const Signup = () => {
   const { authenticateUser } = useContext(AuthContext);
   const [error, setError] = useState(null);
-
   const [newUser, setNewUser] = useState({
     name: "",
     email: "",
@@ -18,7 +17,6 @@ const Signup = () => {
 
   const handleChange = (e) => {
     setNewUser((recent) => ({ ...recent, [e.target.name]: e.target.value }));
-    console.log("New User", newUser);
   };
 
   const handleSubmit = (e) => {
@@ -26,7 +24,6 @@ const Signup = () => {
 
     post("/auth/signup", newUser)
       .then((results) => {
-        console.log("Created User", results.data);
         setError(null);
         localStorage.setItem("authToken", results.data.token);
         navigate(`/`);

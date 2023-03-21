@@ -1,15 +1,13 @@
-import { useState } from "react";
-import { post } from "../services/authService";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { post } from "../services/authService";
 import { LoadingContext } from "../context/loading.context";
-import { useContext } from "react";
 
 const Comment = ({
   commentOwner,
   commentKey,
   commentText,
   authUser,
-  isBackgroundDimmed,
   setIsBackgroundDimmed,
   commentPicture,
 }) => {
@@ -31,8 +29,6 @@ const Comment = ({
 
   const handleChange = (e) => {
     newSetComment((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-    console.log("Changing Comment", newComment);
-    console.log(authUser);
   };
 
   const handleSubmit = (e) => {
@@ -40,7 +36,6 @@ const Comment = ({
 
     post("/tips/add-comment", newComment)
       .then((results) => {
-        console.log("Comment", results.data);
         setIsBackgroundDimmed(false);
         setComment(null);
         getTips();

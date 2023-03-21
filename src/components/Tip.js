@@ -1,31 +1,32 @@
-import { Link } from "react-router-dom";
 import { useContext, useState, useEffect } from "react";
-import { LoadingContext } from "../context/loading.context";
+import { Link } from "react-router-dom";
 import axios from "axios";
+import { LoadingContext } from "../context/loading.context";
 import { baseUrl } from "../services/baseUrl";
 import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 
 const Tip = ({ tip, dimBackground, getTip }) => {
   const { setComment, authUser, getTips } = useContext(LoadingContext);
+
   const [newLike] = useState({ userId: authUser?._id, tipId: tip._id });
+  const [lat, setLat] = useState("");
+  const [long, setLong] = useState("");
+  const [expand, setExpand] = useState(false);
 
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: process.env.REACT_APP_NEXT_GOOGLE_MAPS_KEY,
   });
 
-  const [lat, setLat] = useState("");
-  const [long, setLong] = useState("");
-  const [expand, setExpand] = useState(false);
   const mapClassName = expand ? "map-container" : "map-container-shrunk";
 
   const handleExpand = () => {
     setExpand(!expand);
   };
 
-  function handleClick() {
+  const handleClick = () => {
     dimBackground(true);
     setComment(tip);
-  }
+  };
 
   const createdAt = tip.createdAt;
   const createdDate = new Date(createdAt);
@@ -46,7 +47,7 @@ const Tip = ({ tip, dimBackground, getTip }) => {
     }
   }, [tip]);
 
-  async function geocodeAddress(address) {
+  const geocodeAddress = async (address) => {
     const response = await axios.get(
       "https://maps.googleapis.com/maps/api/geocode/json",
       {
@@ -58,7 +59,7 @@ const Tip = ({ tip, dimBackground, getTip }) => {
     );
     setLat(response.data.results[0].geometry.location.lat);
     setLong(response.data.results[0].geometry.location.lng);
-  }
+  };
 
   const handleToTop = () => {
     window.scrollTo(0, 0);

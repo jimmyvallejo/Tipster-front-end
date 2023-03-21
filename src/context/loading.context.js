@@ -9,8 +9,8 @@ const LoadingProvider = ({ children }) => {
 
   const [authUser, setAuthUser] = useState("");
 
-  const [originalTipsContext, setOriginalTipsContext] = useState("");
-  const [filteredTipsContext, setFilteredTipsContext] = useState("");
+  const [originalTipsContext, setOriginalTipsContext] = useState([]);
+  const [filteredTipsContext, setFilteredTipsContext] = useState([]);
 
   const [message, setMessage] = useState("");
 

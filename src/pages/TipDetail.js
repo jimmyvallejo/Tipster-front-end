@@ -1,14 +1,10 @@
-import { baseUrl } from "../services/baseUrl";
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useState, useEffect, useContext } from "react";
+import { useNavigate, useParams, Link } from "react-router-dom";
 import axios from "axios";
-import { get } from "../services/authService";
-import Comment from "../components/Comments";
-import { useNavigate } from "react-router-dom";
-import { useContext } from "react";
+import { baseUrl } from "../services/baseUrl";
+import { get, post } from "../services/authService";
 import { LoadingContext } from "../context/loading.context";
-import { Link } from "react-router-dom";
-import { post } from "../services/authService";
+import Comment from "../components/Comments";
 import { GoogleMap, useLoadScript } from "@react-google-maps/api";
 import { Marker } from "@react-google-maps/api";
 
@@ -27,6 +23,16 @@ const TipDetail = () => {
   const [long, setLong] = useState("");
   const [tip, setTip] = useState({});
   const [comments, setComments] = useState([]);
+  const [editTip, setEditTip] = useState({
+    text: "",
+    category: "",
+    picture: "",
+    location: "",
+  });
+  const [newLike] = useState({
+    userId: authUser?._id,
+    tipId: id,
+  });
 
   const createdAt = tip.createdAt;
   const createdDate = new Date(createdAt);
@@ -34,10 +40,6 @@ const TipDetail = () => {
   const timeDiff = currentDate.getTime() - createdDate.getTime();
   const hoursAgo = Math.round(timeDiff / 3600000);
 
-  const [newLike] = useState({
-    userId: authUser?._id,
-    tipId: id,
-  });
   const [edit, setEdit] = useState(null);
 
   useEffect(() => {
@@ -50,7 +52,7 @@ const TipDetail = () => {
     }
   }, [tip]);
 
-  async function geocodeAddress(address) {
+  const geocodeAddress = async (address) => {
     const response = await axios.get(
       "https://maps.googleapis.com/maps/api/geocode/json",
       {
@@ -63,7 +65,7 @@ const TipDetail = () => {
 
     setLat(response.data.results[0].geometry.location.lat);
     setLong(response.data.results[0].geometry.location.lng);
-  }
+  };
 
   const getTip = () => {
     axios
@@ -71,7 +73,6 @@ const TipDetail = () => {
       .then((response) => {
         setTip(response.data);
         setComments(response.data.comments);
-        console.log("Tip:", response.data);
       })
       .catch((err) => {
         console.log(err);
@@ -81,7 +82,6 @@ const TipDetail = () => {
   const handleDelete = () => {
     get(`/tips/tip/delete/${id}`)
       .then(() => {
-        console.log("Tip deleted");
         setTips((prevTip) => prevTip.filter((t) => t._id !== id));
         navigate("/");
       })
@@ -90,16 +90,8 @@ const TipDetail = () => {
       });
   };
 
-  const [editTip, setEditTip] = useState({
-    text: "",
-    category: "",
-    picture: "",
-    location: "",
-  });
-
   const handleChange = (e) => {
     setEditTip((recent) => ({ ...recent, [e.target.name]: e.target.value }));
-    console.log("Editing Tip", editTip);
   };
 
   const handleSubmit = (e) => {
@@ -107,7 +99,6 @@ const TipDetail = () => {
 
     post(`/tips/tip-detail/${id}`, editTip)
       .then((results) => {
-        console.log("Tip", results.data);
         setTip(results.data);
         getTips();
         handleEditButton();
@@ -133,16 +124,8 @@ const TipDetail = () => {
     setEdit((edit) => !edit);
   };
 
-  // const handleLocationBlur = (e) => {
-  //   const { name, value } = e.target;
-  //   const formattedValue = `${value} USA`;
-  //   setEditTip((prev) => ({ ...prev, [name]: formattedValue }));
-  //   console.log(setTip);
-  // };
-
   const addLike = () => {
     axios.post(`${baseUrl}/tips/add-like`, newLike).then((results) => {
-      console.log("like++", results.data);
       getTip();
     });
   };

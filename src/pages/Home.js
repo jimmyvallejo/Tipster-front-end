@@ -1,9 +1,10 @@
 import { useEffect, useState, useContext } from "react";
 import { LoadingContext } from "../context/loading.context";
-import Tip from "../components/tip";
-import Comment from "../components/addComment";
-import AddTip from "../components/addTip";
+import Tip from "../components/Tip";
+import Comment from "../components/AddComment";
+import AddTip from "../components/AddTip";
 import WeatherApp from "../components/WeatherWidget";
+import { mobileService } from "../services/mobileService";
 
 const Home = ({ dimBackground, isBackgroundDimmed, setIsBackgroundDimmed }) => {
   const { tips, getTips, comment, authUser } = useContext(LoadingContext);
@@ -14,6 +15,8 @@ const Home = ({ dimBackground, isBackgroundDimmed, setIsBackgroundDimmed }) => {
     setOriginalTipsContext,
     setFilteredTipsContext,
   } = useContext(LoadingContext);
+
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
     if (!tips) {
@@ -27,8 +30,6 @@ const Home = ({ dimBackground, isBackgroundDimmed, setIsBackgroundDimmed }) => {
       setFilteredTipsContext(tips);
     }
   }, [tips, comment]);
-
-  const [query, setQuery] = useState("");
 
   const filterTipList = (category) => {
     if (category === "All") {
@@ -79,11 +80,11 @@ const Home = ({ dimBackground, isBackgroundDimmed, setIsBackgroundDimmed }) => {
       )}
 
       <h2 id="homeh2">Home</h2>
-      {window.innerWidth < 800 && <WeatherApp />}
+      {window.innerWidth < mobileService && <WeatherApp />}
       {authUser && <AddTip />}
       <div
         className={
-          authUser && window.innerWidth < 800
+          authUser && window.innerWidth < mobileService
             ? "smallMainButtons"
             : "mainButtons"
         }
@@ -104,8 +105,7 @@ const Home = ({ dimBackground, isBackgroundDimmed, setIsBackgroundDimmed }) => {
       </div>
 
       <div className="countries-container">
-        {searchTipList.length > 0 ? (
-          <>
+       
             {searchTipList.map((tip) => {
               return (
                 <Tip
@@ -117,10 +117,6 @@ const Home = ({ dimBackground, isBackgroundDimmed, setIsBackgroundDimmed }) => {
                 />
               );
             })}
-          </>
-        ) : (
-          <h4 className="noTips">No tips found</h4>
-        )}
       </div>
     </div>
   );

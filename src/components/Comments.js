@@ -16,8 +16,6 @@ const Comment = ({ comment, setComments }) => {
   const handleDelete = () => {
     get(`/tips/comment/delete/${comment._id}`)
       .then(() => {
-        console.log("Comment deleted");
-        // Remove the deleted comment from the state
         setComments((prevComments) =>
           prevComments.filter((c) => c._id !== comment._id)
         );

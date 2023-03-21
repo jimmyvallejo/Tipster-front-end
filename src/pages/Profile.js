@@ -1,20 +1,26 @@
-import { LoadingContext } from "../context/loading.context";
 import { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
-import { baseUrl } from "../services/baseUrl";
-import Tip from "../components/tip";
-import { Link } from "react-router-dom";
 import { post, get } from "../services/authService";
+import { LoadingContext } from "../context/loading.context";
 import { AuthContext } from "../context/auth.context";
+import { baseUrl } from "../services/baseUrl";
+import Tip from "../components/Tip";
 
-const Profile = ({ setIsBackgroundDimmed, isBackgroundDimmed }) => {
+const Profile = ({ setIsBackgroundDimmed }) => {
   const { id } = useParams();
 
   const [user, setUser] = useState("");
   const [userTips, setUserTips] = useState([]);
-
   const [error, setError] = useState(null);
+  const [edit, setEdit] = useState(null);
+  const [editUser, setEditUser] = useState({
+    name: "",
+    email: "",
+    username: "",
+    profile_image: "",
+    previous_image: user.profile_image,
+  });
 
   const { authUser, getTips } = useContext(LoadingContext);
 
@@ -23,7 +29,6 @@ const Profile = ({ setIsBackgroundDimmed, isBackgroundDimmed }) => {
       .get(`${baseUrl}/users/profile/${id}`)
       .then((response) => {
         setUser(response.data);
-        console.log("User:", response.data);
       })
       .catch((err) => {
         console.log(err);
@@ -35,7 +40,6 @@ const Profile = ({ setIsBackgroundDimmed, isBackgroundDimmed }) => {
       .get(`${baseUrl}/users/profile/tips/${id}`)
       .then((response) => {
         setUserTips(response.data);
-        console.log(response.data);
       })
       .catch((err) => {
         console.log(err);
@@ -49,8 +53,6 @@ const Profile = ({ setIsBackgroundDimmed, isBackgroundDimmed }) => {
   useEffect(() => {
     getTip(id);
   }, []);
-
-  const [edit, setEdit] = useState(null);
 
   const handleEdit = () => {
     setEdit(true);
@@ -66,17 +68,8 @@ const Profile = ({ setIsBackgroundDimmed, isBackgroundDimmed }) => {
 
   const { changeLogout } = useContext(AuthContext);
 
-  const [editUser, setEditUser] = useState({
-    name: "",
-    email: "",
-    username: "",
-    profile_image: "",
-    previous_image: user.profile_image,
-  });
-
   const handleChange = (e) => {
     setEditUser((recent) => ({ ...recent, [e.target.name]: e.target.value }));
-    console.log("Editing User", editUser);
   };
 
   const handleSubmit = (e) => {
@@ -84,7 +77,6 @@ const Profile = ({ setIsBackgroundDimmed, isBackgroundDimmed }) => {
 
     post(`/users/profile-edit/${id}`, editUser)
       .then((results) => {
-        console.log("Edited User", results.data);
         setIsBackgroundDimmed(false);
         changeLogout();
         getTips();
@@ -110,7 +102,6 @@ const Profile = ({ setIsBackgroundDimmed, isBackgroundDimmed }) => {
   const handleDelete = () => {
     get(`/users/profile/delete/${id}`)
       .then(() => {
-        console.log("User deleted");
         handleFalse();
         setIsBackgroundDimmed(false);
         changeLogout();

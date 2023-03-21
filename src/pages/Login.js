@@ -1,5 +1,5 @@
-import { useNavigate } from "react-router-dom";
 import { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { post } from "../services/authService";
 import { AuthContext } from "../context/auth.context";
 
@@ -17,7 +17,6 @@ const Login = () => {
 
   const handleChange = (e) => {
     setCheckUser((recent) => ({ ...recent, [e.target.name]: e.target.value }));
-    console.log("Changing user", checkUser);
   };
 
   const handleSubmit = (e) => {
@@ -25,7 +24,6 @@ const Login = () => {
 
     post("/auth/login", checkUser)
       .then((results) => {
-        console.log("User:", results.data);
         setError(null);
         navigate(`/`);
         localStorage.setItem("authToken", results.data.token);

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Loader } from "semantic-ui-react";
 import moment from "moment";
+import { mobileService } from "../services/mobileService";
 
-export default function WeatherApp() {
+const WeatherApp = () => {
   const [lat, setLat] = useState(null);
   const [long, setLong] = useState(null);
   const [data, setData] = useState([]);
@@ -49,16 +50,21 @@ export default function WeatherApp() {
               <p className="temp">Humidity: {data.main.humidity} %</p>
             </div>
             <div className="flex">
-              {window.innerWidth > 800 && <p className="sunrise-sunset">
-                Sunrise:{" "}
-                {new Date(data.sys.sunrise * 1000).toLocaleTimeString("en-IN")}
-              </p> }
-              
-              {window.innerWidth > 800 && <p className="sunrise-sunset">
-                Sunset:{" "}
-                {new Date(data.sys.sunset * 1000).toLocaleTimeString("en-IN")}
-              </p>
-                 }
+              {window.innerWidth > mobileService && (
+                <p className="sunrise-sunset">
+                  Sunrise:{" "}
+                  {new Date(data.sys.sunrise * 1000).toLocaleTimeString(
+                    "en-IN"
+                  )}
+                </p>
+              )}
+
+              {window.innerWidth > mobileService && (
+                <p className="sunrise-sunset">
+                  Sunset:{" "}
+                  {new Date(data.sys.sunset * 1000).toLocaleTimeString("en-IN")}
+                </p>
+              )}
             </div>
           </div>
         </div>
@@ -67,4 +73,6 @@ export default function WeatherApp() {
       )}
     </>
   );
-}
+};
+
+export default WeatherApp;
