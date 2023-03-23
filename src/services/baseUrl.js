@@ -1,1 +1,1 @@
-export const baseUrl = "https://tipster-server.fly.dev";
+export const baseUrl = "http://localhost:4000";

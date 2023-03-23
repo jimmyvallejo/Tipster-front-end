@@ -792,6 +792,7 @@ body {
   color: black !important;
   position: static;
   margin-left: 600px;
+  margin-top: 20px;
 }
 .editdelete {
   color: black;
