@@ -10,7 +10,7 @@
 
 --I learned about essential functionality of React such as context, prop drilling, state, useffect, and properly structuring components to be reusable.
 
---In this project I incorporated extra features such as a weather API courtesy of openweathermap which takes your current location from your browsers built in location feature and returns weather information based on your latitude and longitude.
+--In this project I incorporated extra features such as a weather API from openweathermap which takes your current location from your browsers built in location feature and returns weather information based on your latitude and longitude.
 
 -- Other APIs I incorporated were the google maps API and the stripe API for a mock payment feature. Map functionality works by user input of an address on the client. This address gets saved to its corresponding "tip" object in my database as "location". When an axios.get is ran to retreieve a tip, the location is extracted and sent to the google maps api, which returns it as latitude and longitude values. These values are saved in state and transferred to the on screen map in the "tip component which is reused for every tip.
 
