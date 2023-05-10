@@ -12,6 +12,7 @@ const Tip = ({ tip, dimBackground, getTip }) => {
   const [lat, setLat] = useState("");
   const [long, setLong] = useState("");
   const [expand, setExpand] = useState(false);
+  const [time, setTime] = useState("")
 
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: process.env.REACT_APP_NEXT_GOOGLE_MAPS_KEY,
@@ -33,6 +34,36 @@ const Tip = ({ tip, dimBackground, getTip }) => {
   const currentDate = new Date();
   const timeDiff = currentDate.getTime() - createdDate.getTime();
   const hoursAgo = Math.round(timeDiff / 3600000);
+  
+const timeFunc = () => {
+  let count = 0;
+  let remainder = 0;
+  if (hoursAgo > 24) {
+    for (let i = 0; i < hoursAgo; i++) {
+      setTime(``);
+      if (i % 24 === 0) {
+        count++;
+      }
+    }
+    remainder = hoursAgo % 24;
+  } else {
+    remainder = hoursAgo;
+  }
+  if(count === 1){
+    setTime(`${count} day ${remainder} hr's`)
+  } else {
+    setTime(`${count} days ${remainder} hr's`);
+  }
+};
+
+
+useEffect(() => {
+  if (hoursAgo > 24) {
+    timeFunc();
+  } else {
+    setTime(`${hoursAgo} hr's`)
+  }
+}, []);
 
   const addLike = () => {
     axios.post(`${baseUrl}/tips/add-like`, newLike).then((results) => {
@@ -77,7 +108,7 @@ const Tip = ({ tip, dimBackground, getTip }) => {
             <img className="profilepic" src={tip.ownerpicture}></img>
           )}
           <p className="tipOwner">{tip.owner}</p>
-          <p className="timeDate">{hoursAgo}h</p>
+          <p className="timeDate">{time}</p>
         </div>
         <Link className="tipLink" to={`/tips/tip-detail/${tip._id}`}>
           {" "}
