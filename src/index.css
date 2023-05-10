@@ -378,6 +378,8 @@ body {
     left: 80px;
     height: 25px;
     width: 25px;
+    margin-top: 0;
+    margin-left: 0;
   }
 }
 
@@ -1648,6 +1650,13 @@ footer a:hover {
   position: relative;
   left: 4px;
 }
+
+
+  #signupimg {
+    margin-top: 10px;
+    margin-left: 5px;
+  }
+
 
 .loginBtn {
   background-color: white;
