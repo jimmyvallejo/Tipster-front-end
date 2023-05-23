@@ -394,7 +394,7 @@ body {
 @media (max-width: 800px) {
   #loginimg {
     position: relative;
-    top: 14px !important;
+    top: 19px !important;
     left: 100px;
     height: 25px;
     width: 25px;
@@ -423,7 +423,7 @@ body {
 @media (max-width: 800px) {
   #logintxt {
     position: relative;
-    top: 6px;
+    top: 12px;
     left: 104px;
   }
 }
